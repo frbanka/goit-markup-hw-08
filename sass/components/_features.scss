@@ -1,0 +1,23 @@
+.features {
+  @include flex-nc-list;
+  max-width: 1170px;
+  gap: 30px;
+  &__title {
+    @include font($fs: 14px, $fw: 700, $lh: 16px, $tal: left);
+    padding-bottom: 10px;
+  }
+  &__text {
+    @include font($fs: 14px, $lh: 24px, $ls: 0.03em, $tal: left);
+    color: var(--second-text-color);
+    max-width: 270px;
+  }
+  &__item {
+    @include flex;
+    margin-bottom: 30px;
+    height: 120px;
+    width: 270px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--background-color-light);
+  }
+}

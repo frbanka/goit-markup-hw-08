@@ -1,0 +1,83 @@
+@mixin font(
+  $fss: normal,
+  $fs: 14px,
+  $fw: 400,
+  $lh: 24px,
+  $ls: 0.03em,
+  $tt: none,
+  $tal: center,
+  $td: none
+) {
+  text-align: $tal;
+  text-transform: $tt;
+  font-style: $fss;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+  text-decoration: $td;
+}
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin flex-nc {
+  display: flex;
+}
+@mixin flex-list {
+  list-style: none;
+}
+@mixin flex-row {
+  flex-direction: row;
+}
+@mixin flex-column {
+  flex-direction: column;
+}
+@mixin flex-wrap {
+  flex-wrap: wrap;
+}
+@mixin flex-columnflex {
+  @include flex;
+  @include flex-column;
+}
+@mixin flex-listflex {
+  @include flex;
+  @include flex-list;
+}
+@mixin flex-rowflex {
+  @include flex;
+  @include flex-row;
+}
+@mixin flex-nc-row {
+  @include flex-nc;
+  @include flex-row;
+}
+@mixin flex-nc-column {
+  @include flex-nc;
+  @include flex-column;
+}
+@mixin flex-nc-row-list {
+  @include flex-nc;
+  @include flex-row;
+  @include flex-list;
+}
+@mixin flex-nc-list {
+  @include flex-nc;
+  @include flex-list;
+}
+@mixin flex-row-list {
+  @include flex;
+  @include flex-row;
+  @include flex-list;
+}
+@mixin flex-column-list {
+  @include flex;
+  @include flex-column;
+  @include flex-list;
+}
+@mixin flex-nc-wrap-list {
+  @include flex-nc;
+  @include flex-wrap;
+  @include flex-list;
+}

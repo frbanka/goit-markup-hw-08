@@ -1,0 +1,40 @@
+.team {
+  @include flex-column-list;
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  &__section {
+    background: var(--background-color-light);
+  }
+  &__person {
+    background: var(--white);
+    width: 270px;
+    height: 428px;
+    box-shadow: var(--box-shadow-card);
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__name {
+    padding: 30px 0px 10px;
+    font-weight: 500;
+    color: var(--main-text-color);
+  }
+  &__description {
+    color: var(--second-text-color);
+  }
+  &__socials {
+    @include flex;
+    padding-top: 16px;
+  }
+  &__icon-social {
+    border: none;
+    border-radius: 50%;
+    fill: var(--icon-color-light);
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      background-color: var(--main-color);
+      fill: var(--white);
+      transition: 250ms, fill background-color, var(--transition-timing);
+    }
+  }
+}

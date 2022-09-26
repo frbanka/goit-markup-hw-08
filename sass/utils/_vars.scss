@@ -1,0 +1,22 @@
+:root {
+  --main-font: Roboto, sans-serif;
+  --second-font: Raleway, sans-serif;
+  --main-text-color: #212121;
+  --second-text-color: #757575;
+  --main-color: #2196f3;
+  --cards-color: #eeeeee;
+  --white: #ffffff;
+  --black: #000000;
+  --icon-color-light: #afb1b8;
+  --icon-color-dark: #ffffff1a;
+  --background-color-dark: #2f303a;
+  --background-color-light: #f5f4fa;
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+  --box-shadow-submit: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --box-shadow-card: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --box-shadow-filter: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --box-shadow-portfolio: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}

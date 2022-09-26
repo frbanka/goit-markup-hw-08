@@ -1,0 +1,94 @@
+.portfolio {
+  max-width: 1600px;
+  padding: 94px 0px 94px 0px;
+  margin: auto;
+  &__filter {
+    @include flex-listflex;
+    gap: 8px;
+    padding-bottom: 50px;
+  }
+  &__button {
+    padding: 0px 22px;
+    height: 38px;
+    @include font($fw: 500, $ls: 0.03em, $tal: center);
+    color: var(--main-text-color);
+    background-color: var(--background-color-light);
+    transition: 250ms, color background-color, var(--transition-timing);
+    &:hover,
+    &:focus {
+      box-shadow: var(--box-shadow-filter);
+      color: var(--white);
+      background-color: var(--main-color);
+      transition: 250ms, color background-color, var(--transition-timing);
+    }
+  }
+}
+.cards {
+  @include flex-nc-wrap-list;
+  height: 100%;
+  column-gap: 30px;
+  gap: 30px;
+  &__item {
+    position: relative;
+    max-width: fit-content;
+    flex-basis: calc(100% / 3);
+    border: 1px solid var(--cards-color);
+    border-width: 0px 1px 1px 1px;
+    &:hover {
+      cursor: pointer;
+      box-shadow: var(--box-shadow-portfolio);
+      transition: 250ms, box-shadow, var(--transition-timing);
+    }
+    &:hover .cards__image .cards__overlay {
+      cursor: pointer;
+      visibility: visible;
+      transform: translatey(0);
+      transition: 200ms, transform, ease;
+    }
+  }
+  &__image {
+    position: relative;
+    overflow: hidden;
+    width: 370px;
+    height: 400px;
+  }
+  &__overlay {
+    position: absolute;
+    @include flex;
+    overflow: hidden;
+    visibility: hidden;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 294px;
+    background: rgba(33, 150, 243, 0.9);
+    transform: translatey(100%);
+    transition-property: transform;
+    transition: 200ms ease;
+    &-text {
+      margin: 0px 24px;
+      color: var(--white);
+      font-family: var(--main-font);
+      @include font($fss: normal, $fw: 400, $fs: 18px, $lh: 28px, $ls: 0.03em);
+    }
+  }
+  &__figcaption {
+    position: absolute;
+    height: 110px;
+    width: 370px;
+    bottom: 0;
+    z-index: 2;
+    background: var(--white);
+  }
+  &__title {
+    margin: 20px 24px 0px 24px;
+    color: var(--main-text-color);
+    @include font($fss: normal, $fw: 700, $fs: 18px, $lh: 36px, $ls: 0.06em);
+  }
+  &__description {
+    margin: 0px 24px 0px 24px;
+    color: var(--second-text-color);
+    @include font($fs: 16px, $lh: 30px, $ls: 0.03em);
+  }
+}

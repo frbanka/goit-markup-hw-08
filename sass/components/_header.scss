@@ -1,0 +1,76 @@
+.header {
+  max-width: 1600px;
+  margin: auto;
+  background: var(--white);
+  border: 1px solid #ececec;
+  border-width: 0px 0px 1px 0px;
+  &__flex {
+    @include flex-nc;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80px;
+    gap: 93px;
+  }
+  &__navigation {
+    @include flex-nc-list;
+    gap: 46px;
+  }
+  &__contacts {
+    @include flex-listflex;
+    gap: 50px;
+    margin-right: 0px;
+    margin-left: auto;
+    &-flex {
+      @include flex;
+      &:focus .header__contacts-icons,
+      &:hover .header__contacts-icons {
+        fill: var(--main-color);
+        transition: 250ms, fill, var(--transition-timing);
+      }
+      &:focus .contacts,
+      &:hover .contacts {
+        color: var(--main-color);
+        transition: 250ms, fill, var(--transition-timing);
+      }
+    }
+    &-icons {
+      margin-left: 0px;
+      margin-right: 10px;
+      fill: var(--second-text-color);
+    }
+  }
+}
+.link {
+  @include font(
+    $fss: normal,
+    $tal: center,
+    $fw: 500,
+    $fs: 14px,
+    $lh: 16px,
+    $ls: 0.02em,
+    $td: none
+  );
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  transition: 250ms, color, var(--transition-timing);
+  &:hover,
+  &:focus {
+    color: var(--main-color);
+    transition: 250ms, color, var(--transition-timing);
+  }
+  &--current {
+    color: var(--main-color);
+    position: relative;
+    &::after {
+      position: absolute;
+      display: block;
+      pointer-events: none;
+      content: "";
+      width: 100%;
+      height: 4px;
+      top: 45px;
+      background: var(--main-color);
+      border-radius: 2px;
+    }
+  }
+}

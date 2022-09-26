@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--main-font);
+  color: var(--main-color);
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+  @include font(
+    $fs: 44px,
+    $fw: 900,
+    $lh: 60px,
+    $ls: 0.06em,
+    $tt: uppercase,
+    $tal: center
+  );
+  color: var(--white);
+  max-width: 696px;
+}
+h2 {
+  @include font($fs: 36px, $fw: 700, $lh: 42px, $ls: 0.03em, $tal: center);
+  color: var(--black);
+  padding-bottom: 50px;
+}
+h3 {
+  @include font(
+    $fss: normal,
+    $fw: 400,
+    $fs: 16px,
+    $lh: 19px,
+    $ls: 0.03em,
+    $tal: center
+  );
+}
+.section {
+  max-width: 1600px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin: auto;
+}
+.container {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+}
+.contacts {
+  @include font($fss: normal, $fs: 14px, $lh: 16px, $ls: 0.02em, $td: none);
+  color: var(--second-text-color);
+  transition: 250ms, color, var(--transition-timing);
+}
+.icon-social {
+  transition: 250ms, fill, var(--transition-timing);
+}
