@@ -40,6 +40,11 @@
     @include flex-nc-list;
     gap: 46px;
   }
+  @media screen and (max-width: 768px) {
+    &__navigation {
+      display: none;
+    }
+  }
   &__contacts {
     @include flex-listflex;
     gap: 50px;
