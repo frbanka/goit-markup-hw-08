@@ -18,7 +18,7 @@
     align-items: flex-start;
     justify-content: flex-start;
   }
-  @media screen and (min-width: 768px) {
+  /*@media screen and (min-width: 768px) {
     &__flex {
       @include flex-nc;
       align-items: center;
@@ -36,37 +36,54 @@
       gap: 93px;
     }
   }
+*/
   &__navigation {
-    @include flex-nc-list;
-    gap: 46px;
+    display: none;
   }
-  @media screen and (max-width: 768px) {
+
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
     &__navigation {
       display: none;
     }
   }
-  &__contacts {
-    @include flex-listflex;
-    gap: 50px;
-    margin-right: 0px;
-    margin-left: auto;
-    &-flex {
-      @include flex;
-      &:focus .header__contacts-icons,
-      &:hover .header__contacts-icons {
-        fill: var(--main-color);
-        transition: 250ms, fill, var(--transition-timing);
-      }
-      &:focus .contacts,
-      &:hover .contacts {
-        color: var(--main-color);
-        transition: 250ms, fill, var(--transition-timing);
-      }
+  @media screen and (min-width: 1200px) {
+    &__navigation {
+      @include flex-nc-list;
+      gap: 46px;
     }
-    &-icons {
-      margin-left: 0px;
-      margin-right: 10px;
-      fill: var(--second-text-color);
+  }
+  &__contacts {
+    display: none;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    &__contacts {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &__contacts {
+      @include flex-listflex;
+      gap: 50px;
+      margin-right: 0px;
+      margin-left: auto;
+      &-flex {
+        @include flex;
+        &:focus .header__contacts-icons,
+        &:hover .header__contacts-icons {
+          fill: var(--main-color);
+          transition: 250ms, fill, var(--transition-timing);
+        }
+        &:focus .contacts,
+        &:hover .contacts {
+          color: var(--main-color);
+          transition: 250ms, fill, var(--transition-timing);
+        }
+      }
+      &-icons {
+        margin-left: 0px;
+        margin-right: 10px;
+        fill: var(--second-text-color);
+      }
     }
   }
 }
