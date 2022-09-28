@@ -47,19 +47,15 @@ h3 {
   padding-bottom: 94px;
   margin: auto;
 }
+
 .container {
-  @media screen and (min-width: 320px) and (max-width: 767px) {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
     width: 480px;
-    height: 100%;
-    margin: auto;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: 768px;
-    height: 100%;
-    margin: auto;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
     height: 100%;
     margin: auto;
   }
