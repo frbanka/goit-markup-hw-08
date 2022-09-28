@@ -1,15 +1,30 @@
 .header {
-  max-width: 1600px;
-  margin: auto;
-  background: var(--white);
-  border: 1px solid #ececec;
-  border-width: 0px 0px 1px 0px;
+  @media screen and (min-width: 320px) {
+    max-width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    margin: auto;
+    background: var(--white);
+    border: 1px solid #ececec;
+    border-width: 0px 0px 1px 0px;
+  }
   &__flex {
     @include flex-nc;
-    align-items: center;
-    justify-content: flex-start;
-    height: 80px;
-    gap: 93px;
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      height: 60px;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199) {
+      align-items: center;
+      justify-content: flex-start;
+      height: 80px;
+      gap: 93px;
+    }
   }
   &__navigation {
     @include flex-nc-list;

@@ -132,7 +132,7 @@
     background-origin: border-box;
     background-color: var(--main-color);
     border-color: transparent;
-    @include transition(250ms, all);
+    transition: 250ms, all, var(--transition-timing);
   }
 }
 .true-checkmark {

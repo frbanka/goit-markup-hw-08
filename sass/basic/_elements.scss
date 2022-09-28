@@ -1,6 +1,6 @@
 .input {
   outline: none;
-  @include transition(250ms, all);
+  transition: 250ms, all, var(--transition-timing);
 }
 .list {
   @include flex-nc-row-list;
@@ -40,16 +40,16 @@
   box-shadow: var(--box-shadow-submit);
   @include font($fss: normal, $fw: 700, $ls: 0.06em);
   color: var(--white);
-  @include transition(250ms, color background-color);
+  transition: 250ms, color background-color, var(--transition-timing);
   &:hover,
   &:focus {
     background-color: var(--white);
     color: var(--black);
-    @include transition(250ms, color background-color);
+    transition: 250ms, color background-color, var(--transition-timing);
   }
   &:hover svg,
   &:focus svg {
     fill: var(--black);
-    @include transition(250ms, fill);
+    transition: 250ms, fill, var(--transition-timing);
   }
 }

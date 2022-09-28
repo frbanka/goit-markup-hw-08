@@ -48,9 +48,21 @@ h3 {
   margin: auto;
 }
 .container {
-  width: 1200px;
-  height: 100%;
-  margin: auto;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 480px;
+    height: 100%;
+    margin: auto;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 768px;
+    height: 100%;
+    margin: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+  }
 }
 .contacts {
   @include font($fss: normal, $fs: 14px, $lh: 16px, $ls: 0.02em, $td: none);
