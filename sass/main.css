@@ -234,10 +234,12 @@ h3 {
   align-items: flex-start;
   justify-content: flex-start;
 }
-.header__navigation {
-  display: none;
+@media screen and (max-width: 767px) {
+  .header__navigation {
+    display: none;
+  }
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .header__navigation {
     display: none;
   }
