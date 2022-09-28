@@ -85,9 +85,9 @@ h3 {
 }
 
 .container {
-  width: 1200px;
-  height: 100%;
   margin: auto;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .contacts {
@@ -100,22 +100,16 @@ h3 {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: var(--second-text-color);
-  transition: 250ms;
-  transition-property: color;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, color, var(--transition-timing);
 }
 
 .icon-social {
-  transition: 250ms;
-  transition-property: fill;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, fill, var(--transition-timing);
 }
 
 .input {
   outline: none;
-  transition: 250ms;
-  transition-property: all;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, all, var(--transition-timing);
 }
 
 .list {
@@ -174,30 +168,29 @@ h3 {
   letter-spacing: 0.06em;
   text-decoration: none;
   color: var(--white);
-  transition: 250ms;
-  transition-property: color background-color;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, color background-color, var(--transition-timing);
 }
 .submit-button:hover, .submit-button:focus {
   background-color: var(--white);
   color: var(--black);
-  transition: 250ms;
-  transition-property: color background-color;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, color background-color, var(--transition-timing);
 }
 .submit-button:hover svg, .submit-button:focus svg {
   fill: var(--black);
-  transition: 250ms;
-  transition-property: fill;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, fill, var(--transition-timing);
 }
 
 .header {
-  max-width: 1600px;
   margin: auto;
   background: var(--white);
   border: 1px solid #ececec;
   border-width: 0px 0px 1px 0px;
+}
+.header__flex {
+  display: flex;
+  height: 60px;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .header__flex {
   display: flex;
@@ -206,41 +199,42 @@ h3 {
   height: 80px;
   gap: 93px;
 }
-.header__navigation {
-  display: flex;
-  list-style: none;
-  gap: 46px;
-}
 .header__contacts {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  gap: 50px;
-  margin-right: 0px;
-  margin-left: auto;
+  display: none;
 }
-.header__contacts-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .header__contacts {
+    display: none;
+  }
 }
-.header__contacts-flex:focus .header__contacts-icons, .header__contacts-flex:hover .header__contacts-icons {
-  fill: var(--main-color);
-  transition: 250ms;
-  transition-property: fill;
-  transition-timing-function: var(--transition-timing);
-}
-.header__contacts-flex:focus .contacts, .header__contacts-flex:hover .contacts {
-  color: var(--main-color);
-  transition: 250ms;
-  transition-property: fill;
-  transition-timing-function: var(--transition-timing);
-}
-.header__contacts-icons {
-  margin-left: 0px;
-  margin-right: 10px;
-  fill: var(--second-text-color);
+@media screen and (min-width: 1200px) {
+  .header__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 50px;
+    margin-right: 0px;
+    margin-left: auto;
+  }
+  .header__contacts-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__contacts-flex:focus .header__contacts-icons, .header__contacts-flex:hover .header__contacts-icons {
+    fill: var(--main-color);
+    transition: 250ms, fill, var(--transition-timing);
+  }
+  .header__contacts-flex:focus .contacts, .header__contacts-flex:hover .contacts {
+    color: var(--main-color);
+    transition: 250ms, fill, var(--transition-timing);
+  }
+  .header__contacts-icons {
+    margin-left: 0px;
+    margin-right: 10px;
+    fill: var(--second-text-color);
+  }
 }
 
 .link {
@@ -254,15 +248,11 @@ h3 {
   text-decoration: none;
   color: var(--main-text-color);
   font-family: var(--main-font);
-  transition: 250ms;
-  transition-property: color;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, color, var(--transition-timing);
 }
 .link:hover, .link:focus {
   color: var(--main-color);
-  transition: 250ms;
-  transition-property: color;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, color, var(--transition-timing);
 }
 .link--current {
   color: var(--main-color);
@@ -336,16 +326,12 @@ h3 {
 }
 .footer__icon-social {
   fill: var(--icon-color-dark);
-  transition: 250ms;
-  transition-property: fill;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, fill, var(--transition-timing);
 }
 .footer__icon-social:hover, .footer__icon-social:focus {
   cursor: pointer;
   fill: var(--main-color);
-  transition: 250ms;
-  transition-property: fill;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, fill, var(--transition-timing);
 }
 .footer__subscribe-label {
   display: block;
@@ -380,9 +366,7 @@ h3 {
 .footer__input:focus {
   border: 1px solid var(--main-color);
   border-radius: 4px;
-  transition: 250ms;
-  transition-property: all;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, all, var(--transition-timing);
 }
 .footer__button-items {
   display: flex;
@@ -432,17 +416,13 @@ h3 {
   fill: var(--icon-color-light);
   border: 1px solid var(--icon-color-light);
   border-radius: 4px;
-  transition: 250ms;
-  transition-property: fill;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, fill, var(--transition-timing);
 }
 .clients__item:hover, .clients__item:focus {
   cursor: pointer;
   fill: var(--main-color);
   border: 1px solid var(--main-color);
-  transition: 250ms;
-  transition-property: fill;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, fill, var(--transition-timing);
 }
 
 .features {
@@ -497,9 +477,7 @@ h3 {
   z-index: 2;
   opacity: 1;
   visibility: 1;
-  transition: 500ms;
-  transition-property: all;
-  transition-timing-function: ease-in-out;
+  transition: 500ms, all, ease-in-out;
 }
 .modal__window {
   position: relative;
@@ -550,9 +528,7 @@ h3 {
 .modal__input:focus {
   border: 1px solid var(--main-color);
   border-radius: 4px;
-  transition: 250ms;
-  transition-property: all;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, all, var(--transition-timing);
 }
 .modal__input-label {
   position: relative;
@@ -573,9 +549,7 @@ h3 {
 }
 .modal__input-label:focus-within svg {
   fill: var(--main-color);
-  transition: 250ms;
-  transition-property: all;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, all, var(--transition-timing);
 }
 .modal__comment-area {
   width: 448px;
@@ -594,16 +568,12 @@ h3 {
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  transition: 250ms;
-  transition-property: all;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, all, var(--transition-timing);
 }
 .modal__comment-area:focus {
   border: 1px solid var(--main-color);
   border-radius: 4px;
-  transition: 250ms;
-  transition-property: all;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, all, var(--transition-timing);
 }
 .modal__title {
   margin: 0px 0px 12px 0px;
@@ -652,9 +622,7 @@ h3 {
   background-origin: border-box;
   background-color: var(--main-color);
   border-color: transparent;
-  transition: 250ms;
-  transition-property: all;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, all, var(--transition-timing);
 }
 
 .true-checkmark {
@@ -665,9 +633,7 @@ h3 {
   width: 16px;
   border: 2px solid var(--black);
   border-radius: 2px;
-  transition: 250ms;
-  transition-property: all;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, all, var(--transition-timing);
 }
 
 .reglink {
@@ -680,9 +646,7 @@ h3 {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
-  transition: 500ms;
-  transition-property: all;
-  transition-timing-function: ease-in-out;
+  transition: 250ms, all, var(--transition-timing);
 }
 
 .portfolio {
@@ -711,17 +675,13 @@ h3 {
   text-decoration: none;
   color: var(--main-text-color);
   background-color: var(--background-color-light);
-  transition: 250ms;
-  transition-property: color background-color;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, color background-color, var(--transition-timing);
 }
 .portfolio__button:hover, .portfolio__button:focus {
   box-shadow: var(--box-shadow-filter);
   color: var(--white);
   background-color: var(--main-color);
-  transition: 250ms;
-  transition-property: color background-color;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, color background-color, var(--transition-timing);
 }
 
 .cards {
@@ -742,17 +702,13 @@ h3 {
 .cards__item:hover {
   cursor: pointer;
   box-shadow: var(--box-shadow-portfolio);
-  transition: 250ms;
-  transition-property: box-shadow;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, box-shadow, var(--transition-timing);
 }
 .cards__item:hover .cards__image .cards__overlay {
   cursor: pointer;
   visibility: visible;
   transform: translatey(0);
-  transition: 200ms;
-  transition-property: transform;
-  transition-timing-function: ease;
+  transition: 200ms, transform, ease;
 }
 .cards__image {
   position: relative;
@@ -866,9 +822,7 @@ h3 {
   cursor: pointer;
   background-color: var(--main-color);
   fill: var(--white);
-  transition: 250ms;
-  transition-property: fill background-color;
-  transition-timing-function: var(--transition-timing);
+  transition: 250ms, fill background-color, var(--transition-timing);
 }
 
 .work {
@@ -908,4 +862,38 @@ h3 {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--white);
+}
+
+@media screen and (min-width: 480px) {
+  .header {
+    max-width: 480px;
+  }
+  .header__navigation {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    max-width: 768px;
+  }
+  .header__navigation {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    max-width: 1600px;
+  }
+  .header__flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80px;
+    gap: 93px;
+  }
+  .header__navigation {
+    display: flex;
+    list-style: none;
+    gap: 46px;
+  }
 }/*# sourceMappingURL=main.css.map */

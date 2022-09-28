@@ -3,90 +3,14 @@
   background: var(--white);
   border: 1px solid #ececec;
   border-width: 0px 0px 1px 0px;
-  @media screen and (min-width: 480px) {
-    max-width: 480px;
-  }
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-  }
-  @media screen and (min-width: 1200px) {
-    max-width: 1600px;
-  }
   &__flex {
     @include flex-nc;
     height: 60px;
     align-items: flex-start;
-    justify-content: flex-start;
-  }
-  /*@media screen and (min-width: 768px) {
-    &__flex {
-      @include flex-nc;
-      align-items: center;
-      justify-content: flex-start;
-      height: 80px;
-      gap: 93px;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    &__flex {
-      @include flex-nc;
-      align-items: center;
-      justify-content: flex-start;
-      height: 80px;
-      gap: 93px;
-    }
-  }
-*/
-  @media screen and (max-width: 767px) {
-    &__navigation {
-      display: none;
-    }
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    &__navigation {
-      display: none;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    &__navigation {
-      @include flex-nc-list;
-      gap: 46px;
-    }
+    justify-content: center;
   }
   &__contacts {
     display: none;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
-    &__contacts {
-      display: none;
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    &__contacts {
-      @include flex-listflex;
-      gap: 50px;
-      margin-right: 0px;
-      margin-left: auto;
-      &-flex {
-        @include flex;
-        &:focus .header__contacts-icons,
-        &:hover .header__contacts-icons {
-          fill: var(--main-color);
-          transition: 250ms, fill, var(--transition-timing);
-        }
-        &:focus .contacts,
-        &:hover .contacts {
-          color: var(--main-color);
-          transition: 250ms, fill, var(--transition-timing);
-        }
-      }
-      &-icons {
-        margin-left: 0px;
-        margin-right: 10px;
-        fill: var(--second-text-color);
-      }
-    }
   }
 }
 .link {
