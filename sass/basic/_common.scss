@@ -49,15 +49,12 @@ h3 {
 }
 
 .container {
-  width: 1200px;
-  height: 100%;
   margin: auto;
-}
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .container {
-    width: 480px;
-    height: 100%;
-    margin: auto;
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
   }
 }
 .contacts {
