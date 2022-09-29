@@ -3,14 +3,19 @@
   background: var(--white);
   border: 1px solid #ececec;
   border-width: 0px 0px 1px 0px;
-  &__flex {
-    @include flex-nc;
-    height: 60px;
-    align-items: flex-start;
-    justify-content: center;
-  }
   &__contacts {
     display: none;
+  }
+}
+.hamburger {
+  fill: var(--black);
+  &:hover {
+    cursor: pointer;
+    fill: var(--main-color);
+  }
+  &__button {
+    background: none;
+    border: none;
   }
 }
 .link {
