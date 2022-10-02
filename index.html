@@ -21,35 +21,7 @@
     <link rel="stylesheet" href="sass/main.css" />
   </head>
   <body>
-    <div class="menu-hamburger js-menu-container" id="mobilemenu">
-      <button type="button" class="hamburger__button--close js-close-menu">
-      <svg width="40" height="40">
-        <use href="./images/icons.svg#hamburger"></use>
-      </svg>
-      </button>
-      <ul class="menu-hamburger__nav">
-            <li class="menu-hamburger__item">
-              <a class="link link--current" href="./index.html">Agencja</a>
-            </li>
-            <li class="menu-hamburger__item">
-              <a class="link" href="./portfolio.html">Portfolio</a>
-            </li>
-            <li class="menu-hamburger__item">
-              <a class="link" href="#">Kontakt</a>
-            </li>
-          </ul>
-          <ul class="menu-hamburger__contacts">
-            <li class="menu-hamburger__item">
-              <a href="mailto:info@devstudio.com" class="link">
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="menu-hamburger__item">
-              <a href="tel:+380991111111" class="link">
-                +38 096 111 11 11</a>
-            </li>
-          </ul>
-    </div>
+  
     <div class="modal is-hidden" id="modal" data-modal>
       <div class="modal__window">
         <button class="modal__button-close" data-modal-close>
@@ -625,6 +597,52 @@
         </div>
       </section>
     </footer>
+    <div class="menu-hamburger js-menu-container" id="mobilemenu">
+			<button class="menu-toggle js-close-menu">
+				<svg class="active-btn">
+					<use
+						href="./images/icons.svg#icon-close"
+						width="19"
+						height="19"
+					></use>
+				</svg>
+			</button>
+			<div>
+				<ul class="mobile-menu list-pages">
+					<li><a href="#" class="list-pages__link">Agencja</a></li>
+					<li>
+						<a href="./portfolio.html" class="list-pages__link">Portfolio</a>
+					</li>
+					<li><a href="#" class="list-pages__link">Kontakt</a></li>
+				</ul>
+				<ul class="mobile-menu list-contacts">
+					<li>
+						<a class="list-contacts__phone" href="tel:+48111111111"
+							>+48 111 111 111
+						</a>
+					</li>
+					<li>
+						<a class="list-contacts__mail" href="mailto:info@devstudio.com"
+							>info@devstudio.com
+						</a>
+					</li>
+				</ul>
+				<ul class="mobile-menu list-social">
+					<li class="list-social__item">
+						<a class="list-social__item--link" href="">Instagram</a>
+					</li>
+					<li class="list-social__item">
+						<a class="list-social__item--link" href="">Twitter</a>
+					</li>
+					<li class="list-social__item">
+						<a class="list-social__item--link" href="">Facebook</a>
+					</li>
+					<li class="list-social__item">
+						<a class="list-social__item--link" href="">LinkedIn</a>
+					</li>
+				</ul>
+			</div>
+		</div>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"

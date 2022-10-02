@@ -1,10 +1,12 @@
 .features {
   @include flex-column-list;
-  max-width: 450px;
   gap: 30px;
   &__title {
     text-align: center;
     padding-bottom: 10px;
+  }
+  &__tablet {
+    max-width: 450px;
   }
   &__text {
     @include font($fs: 14px, $lh: 24px, $ls: 0.03em, $tal: left);
@@ -21,12 +23,10 @@
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
-    max-width: 768px;
-    gap: 0px;
+    justify-content: center;
     row-gap: 30px;
     &__tablet {
-      flex-basis: 354px;
+      max-width: 354px;
       padding: 0px 15px 0px 15px;
     }
     &__item {

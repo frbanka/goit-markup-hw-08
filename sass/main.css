@@ -117,18 +117,10 @@ h4 {
 }
 
 .container {
-  margin: auto;
-  width: 468px;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .container {
-    width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 1200px;
-  }
+  margin: 0 auto;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1200px;
 }
 
 .contacts {
@@ -238,20 +230,21 @@ h4 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
-    background-color: #3f51b5;
-    z-index: 999;
+    padding: 48px 0 48px 40px;
+    background-color: var(--transition-timing);
+    z-index: 10;
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
-  }
-  .menu-hamburger .menu-container.is-open {
-    transform: translateX(0);
   }
 }
 @media (min-width: 768px) {
   .menu-hamburger {
     display: none;
   }
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
 }
 
 .mobile-menu {
@@ -421,7 +414,6 @@ h4 {
 
 .footer {
   height: 603px;
-  max-width: 480px;
   background: var(--background-color-dark);
   margin: auto;
   padding-top: 60px;
@@ -480,7 +472,9 @@ h4 {
   color: rgba(255, 255, 255, 0.6);
   padding-left: 15px;
   padding-right: 15px;
-  width: 450px;
+  min-width: 290px;
+  max-width: 450px;
+  width: calc(100vw - 30px);
   height: 50px;
   background-color: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -529,7 +523,6 @@ h4 {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer {
     height: 463px;
-    max-width: 768px;
   }
   .footer__container {
     flex-direction: row;
@@ -543,7 +536,6 @@ h4 {
     flex-basis: 50%;
   }
   .footer__input {
-    width: 450px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -576,14 +568,19 @@ h4 {
 
 /*@media screen and (max-width: 767px)*/
 /*mobile-first*/
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .background {
+    background-image: url(../../images/bg@2x.jpg);
+  }
+}
 .banner {
   display: flex;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("../images/main-background.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  max-width: 480px;
   height: 400px;
 }
 .banner__flex {
@@ -594,11 +591,6 @@ h4 {
   gap: 30px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .banner {
-    max-width: 768px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .banner {
     max-width: 1600px;
@@ -659,12 +651,14 @@ h4 {
   justify-content: center;
   flex-direction: column;
   list-style: none;
-  max-width: 450px;
   gap: 30px;
 }
 .features__title {
   text-align: center;
   padding-bottom: 10px;
+}
+.features__tablet {
+  max-width: 450px;
 }
 .features__text {
   text-align: left;
@@ -691,13 +685,11 @@ h4 {
   .features {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
-    max-width: 768px;
-    gap: 0px;
+    justify-content: center;
     row-gap: 30px;
   }
   .features__tablet {
-    flex-basis: 354px;
+    max-width: 354px;
     padding: 0px 15px 0px 15px;
   }
   .features__item {
@@ -1044,7 +1036,8 @@ h4 {
   flex-direction: column;
   list-style: none;
   flex-wrap: wrap;
-  width: 480px;
+  width: 100%;
+  height: 100%;
   margin: auto;
 }
 .team__list {
@@ -1065,14 +1058,8 @@ h4 {
   justify-content: center;
   flex-direction: column;
   background: var(--white);
-  width: 450px;
-  height: 622px;
   box-shadow: var(--box-shadow-card);
   border-radius: 0px 0px 4px 4px;
-}
-.team__person img {
-  width: 450px;
-  height: 460px;
 }
 .team__name {
   padding: 30px 0px 10px;
@@ -1142,8 +1129,6 @@ h4 {
     padding-top: 16px;
     padding-bottom: 30px;
   }
-}
-@media screen and (min-width: 1200px) and (min-width: 1200px) {
   .team__list {
     flex-direction: row;
     gap: 30px;
