@@ -21,6 +21,35 @@
     <link rel="stylesheet" href="sass/main.css" />
   </head>
   <body>
+    <div class="menu-hamburger js-menu-container" id="mobilemenu">
+      <button type="button" class="hamburger__button--close js-close-menu">
+      <svg width="40" height="40">
+        <use href="./images/icons.svg#hamburger"></use>
+      </svg>
+      </button>
+      <ul class="menu-hamburger__nav">
+            <li class="menu-hamburger__item">
+              <a class="link link--current" href="./index.html">Agencja</a>
+            </li>
+            <li class="menu-hamburger__item">
+              <a class="link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="menu-hamburger__item">
+              <a class="link" href="#">Kontakt</a>
+            </li>
+          </ul>
+          <ul class="menu-hamburger__contacts">
+            <li class="menu-hamburger__item">
+              <a href="mailto:info@devstudio.com" class="link">
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="menu-hamburger__item">
+              <a href="tel:+380991111111" class="link">
+                +38 096 111 11 11</a>
+            </li>
+          </ul>
+    </div>
     <div class="modal is-hidden" id="modal" data-modal>
       <div class="modal__window">
         <button class="modal__button-close" data-modal-close>
@@ -99,8 +128,8 @@
           <a class="logo" href="./index.html"
             ><span>Web</span><span class="logo--black">Studio</span>
           </a>
-          <button type="button" class="hamburger__button" aria-expanded="false"
-          aria-controls="menu-hamburger" .js-open-menu>
+          <button type="button" class="hamburger__button js-open-menu" aria-expanded="false"
+          aria-controls="mobilemenu">
             <svg class="hamburger" height="16px" width="24px">
               <use href="./images/icons.svg#hamburger"></use>
             </svg>
@@ -140,37 +169,6 @@
         </div>
       </div>
     </header>
-    <div class="menu-hamburger" id="menu-hamburger" .js-menu-container>
-      <button type="button" class="hamburger__button--close" aria-expanded="false"
-          aria-controls="menu-hamburger" .js-close-menu>
-      <svg width="40" height="40">
-        <use href="./images/icons.svg#hamburger"></use>
-      </svg>
-      </button>
-      <ul class="menu-hamburger__nav">
-            <li class="menu-hamburger__item">
-              <a class="link link--current" href="./index.html">Agencja</a>
-            </li>
-            <li class="menu-hamburger__item">
-              <a class="link" href="./portfolio.html">Portfolio</a>
-            </li>
-            <li class="menu-hamburger__item">
-              <a class="link" href="#">Kontakt</a>
-            </li>
-          </ul>
-
-          <ul class="menu-hamburger__contacts">
-            <li class="menu-hamburger__item">
-              <a href="mailto:info@devstudio.com" class="link">
-                info@devstudio.com
-              </a>
-            </li>
-            <li class="menu-hamburger__item">
-              <a href="tel:+380991111111" class="link">
-                +38 096 111 11 11</a>
-            </li>
-          </ul>
-    </div>
     <section class="section banner">
       <div class="container">
         <div class="banner__flex">

@@ -231,9 +231,6 @@ h4 {
   transition: 250ms, fill, var(--transition-timing);
 }
 
-.menu-hamburger {
-  visibility: hidden;
-}
 @media screen and (max-width: 767px) {
   .menu-hamburger {
     position: fixed;
@@ -242,14 +239,18 @@ h4 {
     width: 100vw;
     height: 100vh;
     padding: 32px;
-    background-color: var(--white);
+    background-color: #3f51b5;
     z-index: 999;
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
-    visibility: hidden;
   }
-  .menu-hamburger .menu-hamburger.is-open {
+  .menu-hamburger .menu-container.is-open {
     transform: translateX(0);
+  }
+}
+@media (min-width: 768px) {
+  .menu-hamburger {
+    display: none;
   }
 }
 
