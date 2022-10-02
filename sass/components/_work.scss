@@ -1,8 +1,26 @@
+@media screen and (max-width: 767px) {
+  .work__section {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .work__section {
+    display: none;
+  }
+}
 .work {
   @include flex-column-list;
   width: 1200px;
   height: 100%;
   margin: auto;
+  &__list {
+    @include flex-column-list;
+    gap: 30px;
+    @media screen and (min-width: 1200px) {
+      @include flex-nc-row-list;
+      gap: 30px;
+    }
+  }
   &__card {
     position: relative;
     width: 100%;

@@ -1,23 +1,53 @@
 .features {
-  @include flex-nc-list;
-  max-width: 1170px;
+  @include flex-column-list;
+  max-width: 450px;
   gap: 30px;
   &__title {
-    @include font($fs: 14px, $fw: 700, $lh: 16px, $tal: left);
+    text-align: center;
     padding-bottom: 10px;
   }
   &__text {
     @include font($fs: 14px, $lh: 24px, $ls: 0.03em, $tal: left);
     color: var(--second-text-color);
-    max-width: 270px;
   }
   &__item {
     @include flex;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     height: 120px;
-    width: 270px;
     border: none;
     border-radius: 4px;
     background-color: var(--background-color-light);
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    max-width: 768px;
+    gap: 0px;
+    row-gap: 30px;
+    &__tablet {
+      flex-basis: 354px;
+      padding: 0px 15px 0px 15px;
+    }
+    &__item {
+      width: 354px;
+    }
+    &__title {
+      text-align: left;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    max-width: 1170px;
+    &__text {
+      max-width: 270px;
+    }
+    &__item {
+      margin-bottom: 30px;
+      width: 270px;
+    }
+    &__title {
+      text-align: left;
+    }
   }
 }

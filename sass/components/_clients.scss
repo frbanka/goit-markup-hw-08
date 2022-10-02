@@ -1,14 +1,14 @@
 .clients {
-  padding-top: 94px;
+  padding-top: 60px;
   &__card {
-    @include flex-row-list;
+    @include flex-rowflex;
+    flex-wrap: wrap;
     gap: 30px;
-    margin: auto;
-    padding-bottom: 94px;
+    padding-bottom: 60px;
   }
   &__item {
     @include flex;
-    width: 170px;
+    width: 210px;
     height: 92px;
     fill: var(--icon-color-light);
     border: 1px solid var(--icon-color-light);
@@ -20,6 +20,17 @@
       fill: var(--main-color);
       border: 1px solid var(--main-color);
       transition: 250ms, fill, var(--transition-timing);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    &__card {
+      margin: auto;
+      padding-bottom: 94px;
+    }
+    &__item {
+      @include flex;
+      width: 170px;
     }
   }
 }

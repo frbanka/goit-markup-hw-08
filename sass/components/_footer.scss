@@ -2,17 +2,23 @@
   gap: 5px;
 }
 .footer {
+  height: 603px;
+  max-width: 480px;
+  background: var(--background-color-dark);
+  margin: auto;
   padding-top: 60px;
   padding-bottom: 60px;
-  margin: auto;
-  background: var(--background-color-dark);
-  max-width: 1600px;
-  height: 225px;
   &__container {
-    @include flex-nc-row;
-    gap: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  &__item {
+    @include flex-nc-column;
+    align-items: center;
   }
   &__address {
+    text-align: center;
     padding-top: 20px;
     line-height: 24px;
     &--place {
@@ -21,13 +27,45 @@
       color: var(--white);
     }
   }
-  &__item {
-    @include flex-nc-column;
+  &__subscribe-form {
+    @include flex-columnflex;
+    gap: 20px;
   }
-  &__icons {
-    @include flex-nc-row;
-    gap: 10px;
-    padding-top: 20px;
+  &__subscribe-label {
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    @include font(
+      $fss: normal,
+      $fs: 14px,
+      $fw: 700,
+      $lh: 14px,
+      $ls: 0.03em,
+      $tt: uppercase
+    );
+    color: var(--white);
+  }
+  &__input {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 450px;
+    height: 50px;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    &:focus {
+      border: 1px solid var(--main-color);
+      border-radius: 4px;
+      transition: 250ms, all, var(--transition-timing);
+    }
+  }
+  &__button-items {
+    @include flex-rowflex;
+    gap: 24px;
+    padding: 0px;
+    margin: 0px;
   }
   &__socials-title {
     @include font(
@@ -51,44 +89,50 @@
       transition: 250ms, fill, var(--transition-timing);
     }
   }
-  &__subscribe-label {
-    display: block;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    @include font(
-      $fss: normal,
-      $fs: 14px,
-      $fw: 700,
-      $lh: 14px,
-      $ls: 0.03em,
-      $tt: uppercase
-    );
-    color: var(--white);
-  }
-  &__subscribe-form {
+  &__icons {
     @include flex-nc-row;
-    gap: 12px;
+    gap: 10px;
+    padding-top: 20px;
   }
-  &__input {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.6);
-    margin-right: 10px;
-    padding: 15px;
-    width: 360px;
-    height: 50px;
-    background-color: inherit;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    &:focus {
-      border: 1px solid var(--main-color);
-      border-radius: 4px;
-      transition: 250ms, all, var(--transition-timing);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    height: 463px;
+    max-width: 768px;
+    &__container {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0px;
+      row-gap: 60px;
+    }
+    &__item {
+      flex-basis: calc(100% / 2);
+    }
+    &__input {
+      width: 450px;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
-  &__button-items {
-    @include flex-rowflex;
-    gap: 24px;
-    padding: 0px;
-    margin: 0px;
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 225px;
+    &__container {
+      @include flex-nc-row;
+      gap: 70px;
+    }
+    &__item {
+      align-items: flex-start;
+    }
+    &__address {
+      text-align: left;
+    }
+    &__subscribe-form {
+      @include flex-nc-row;
+      gap: 12px;
+    }
+    &__input {
+      width: 360px;
+    }
   }
 }

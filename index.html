@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
     <title>Studio</title>
     <link
       rel="stylesheet"
@@ -96,7 +99,8 @@
           <a class="logo" href="./index.html"
             ><span>Web</span><span class="logo--black">Studio</span>
           </a>
-          <button class="hamburger__button" .js-open-menu>
+          <button type="button" class="hamburger__button" aria-expanded="false"
+          aria-controls="menu-hamburger" .js-open-menu>
             <svg class="hamburger" height="16px" width="24px">
               <use href="./images/icons.svg#hamburger"></use>
             </svg>
@@ -119,7 +123,7 @@
           </nav>
           <ul class="header__contacts">
             <li class="header__contacts-flex">
-              <svg class="header__contacts-icons" height="12px" width="16px">
+              <svg class="header__contacts-icons" height="10px" width="14px">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               <a class="contacts" href="mailto:info@devstudio.com"
@@ -127,7 +131,7 @@
               >
             </li>
             <li class="header__contacts-flex">
-              <svg class="header__contacts-icons" height="16px" width="10px">
+              <svg class="header__contacts-icons" height="14px" width="10px">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               <a class="contacts" href="tel:+48111111111">+48 111 111 111</a>
@@ -136,6 +140,37 @@
         </div>
       </div>
     </header>
+    <div class="menu-hamburger" id="menu-hamburger" .js-menu-container>
+      <button type="button" class="hamburger__button--close" aria-expanded="false"
+          aria-controls="menu-hamburger" .js-close-menu>
+      <svg width="40" height="40">
+        <use href="./images/icons.svg#hamburger"></use>
+      </svg>
+      </button>
+      <ul class="menu-hamburger__nav">
+            <li class="menu-hamburger__item">
+              <a class="link link--current" href="./index.html">Agencja</a>
+            </li>
+            <li class="menu-hamburger__item">
+              <a class="link" href="./portfolio.html">Portfolio</a>
+            </li>
+            <li class="menu-hamburger__item">
+              <a class="link" href="#">Kontakt</a>
+            </li>
+          </ul>
+
+          <ul class="menu-hamburger__contacts">
+            <li class="menu-hamburger__item">
+              <a href="mailto:info@devstudio.com" class="link">
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="menu-hamburger__item">
+              <a href="tel:+380991111111" class="link">
+                +38 096 111 11 11</a>
+            </li>
+          </ul>
+    </div>
     <section class="section banner">
       <div class="container">
         <div class="banner__flex">
@@ -150,62 +185,70 @@
       <div class="container">
         <section>
           <ul class="features">
-            <li>
-              <div class="features__item">
-                <svg height="70px" width="70px">
-                  <use href="./images/icons.svg#icon-antenna"></use>
-                </svg>
-              </div>
-              <h2 class="features__title">LOREM IPSUM</h2>
-              <p class="features__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                arcu sem. Sed non sodales dui. Interdum et malesuada
-              </p>
-            </li>
-            <li>
-              <div class="features__item">
-                <svg height="70px" width="70px">
-                  <use href="./images/icons.svg#icon-clock"></use>
-                </svg>
-              </div>
-              <h2 class="features__title">LOREM IPSUM</h2>
-              <p class="features__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                arcu sem. Sed non sodales dui. Interdum et malesuada
-              </p>
-            </li>
-            <li>
-              <div class="features__item">
-                <svg height="70px" width="70px">
-                  <use href="./images/icons.svg#icon-diagram"></use>
-                </svg>
-              </div>
-              <h2 class="features__title">LOREM IPSUM</h2>
-              <p class="features__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                arcu sem. Sed non sodales dui. Interdum et malesuada
-              </p>
-            </li>
-            <li>
-              <div class="features__item">
-                <svg height="70px" width="70px">
-                  <use href="./images/icons.svg#icon-astronaut"></use>
-                </svg>
-              </div>
-              <h2 class="features__title">LOREM IPSUM</h2>
-              <p class="features__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
-                arcu sem. Sed non sodales dui. Interdum et malesuada
-              </p>
-            </li>
+            <div class="features__tablet">
+              <li>
+                <div class="features__item">
+                  <svg height="70px" width="70px">
+                    <use href="./images/icons.svg#icon-antenna"></use>
+                  </svg>
+                </div>
+                <h4 class="features__title">LOREM IPSUM</h4>
+                <p class="features__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vel arcu sem. Sed non sodales dui. Interdum et malesuada
+                </p>
+              </li>
+            </div>
+            <div class="features__tablet">
+              <li>
+                <div class="features__item">
+                  <svg height="70px" width="70px">
+                    <use href="./images/icons.svg#icon-clock"></use>
+                  </svg>
+                </div>
+                <h4 class="features__title">LOREM IPSUM</h4>
+                <p class="features__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vel arcu sem. Sed non sodales dui. Interdum et malesuada
+                </p>
+              </li>
+            </div>
+            <div class="features__tablet">
+              <li>
+                <div class="features__item">
+                  <svg height="70px" width="70px">
+                    <use href="./images/icons.svg#icon-diagram"></use>
+                  </svg>
+                </div>
+                <h4 class="features__title">LOREM IPSUM</h4>
+                <p class="features__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vel arcu sem. Sed non sodales dui. Interdum et malesuada
+                </p>
+              </li>
+            </div>
+            <div class="features__tablet">
+              <li>
+                <div class="features__item">
+                  <svg height="70px" width="70px">
+                    <use href="./images/icons.svg#icon-astronaut"></use>
+                  </svg>
+                </div>
+                <h4 class="features__title">LOREM IPSUM</h4>
+                <p class="features__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  vel arcu sem. Sed non sodales dui. Interdum et malesuada
+                </p>
+              </li>
+            </div>
           </ul>
         </section>
       </div>
     </section>
-    <section class="section">
+    <section class="section work__section">
       <div class="work">
         <h2>Czym się zajmujemy</h2>
-        <ul class="list">
+        <ul class="work__list">
           <li class="work__card">
             <img
               src="./images/programming.jpg"
@@ -245,15 +288,25 @@
     <section class="section team__section">
       <div class="team">
         <h2>Nasz zespół</h2>
-        <ul class="list">
+        <ul class="team__list">
+          <div>
           <li>
             <figure class="team__person">
-              <img
-                src="./images/johndoe1.jpg"
-                width="270"
-                height="260"
-                alt="Photo of John Doe"
-              />
+              <picture>
+                <source
+                  srcset="./images/johndoe1.jpg 1x, ./images/johndoe1@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/johndoe1.jpg 1x, ./images/johndoe1@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/johndoe1.jpg 1x, ./images/johndoe1@2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/johndoe1.jpg" alt="Photo of John Doe" />
+              </picture>
               <figcaption>
                 <h3 class="team__name">John Doe</h3>
                 <h3 class="team__description">Product Designer</h3>
@@ -290,14 +343,26 @@
               </figcaption>
             </figure>
           </li>
+          </div>
+          <div>
           <li>
             <figure class="team__person">
-              <img
-                src="./images/johndoe2.jpg"
-                width="270"
-                height="260"
-                alt="Photo of John Doe"
-              />
+              <figure class="team__person">
+              <picture>
+                <source
+                  srcset="./images/johndoe2.jpg 1x, ./images/johndoe2@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/johndoe2.jpg 1x, ./images/johndoe2@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/johndoe2.jpg 1x, ./images/johndoe2@2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/johndoe2.jpg" alt="Photo of John Doe" />
+              </picture>
               <figcaption>
                 <h3 class="team__name">John Doe</h3>
                 <h3 class="team__description">Product Designer</h3>
@@ -334,14 +399,26 @@
               </figcaption>
             </figure>
           </li>
+          </div>
+          <div>
           <li>
             <figure class="team__person">
-              <img
-                src="./images/johndoe3.jpg"
-                width="270"
-                height="260"
-                alt="Photo of John Doe"
-              />
+              <figure class="team__person">
+              <picture>
+                <source
+                  srcset="./images/johndoe3.jpg 1x, ./images/johndoe3@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/johndoe3.jpg 1x, ./images/johndoe3@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/johndoe3.jpg 1x, ./images/johndoe3@2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/johndoe3.jpg" alt="Photo of John Doe" />
+              </picture>
               <figcaption>
                 <h3 class="team__name">John Doe</h3>
                 <h3 class="team__description">Product Designer</h3>
@@ -378,14 +455,25 @@
               </figcaption>
             </figure>
           </li>
+          </div>
+          <div>
           <li>
             <figure class="team__person">
-              <img
-                src="./images/johndoe4.jpg"
-                width="270"
-                height="260"
-                alt="Photo of John Doe"
-              />
+              <picture>
+                <source
+                  srcset="./images/johndoe4.jpg 1x, ./images/johndoe4@2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/johndoe4.jpg 1x, ./images/johndoe4@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/johndoe4.jpg 1x, ./images/johndoe4@2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/johndoe4.jpg" alt="Photo of John Doe" />
+              </picture>
               <figcaption>
                 <h3 class="team__name">John Doe</h3>
                 <h3 class="team__description">Product Designer</h3>
@@ -422,6 +510,7 @@
               </figcaption>
             </figure>
           </li>
+          </div>
         </ul>
       </div>
     </section>
@@ -538,6 +627,13 @@
         </div>
       </section>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

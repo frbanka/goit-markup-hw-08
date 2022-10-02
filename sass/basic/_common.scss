@@ -16,20 +16,31 @@ img {
 }
 h1 {
   @include font(
-    $fs: 44px,
+    $fs: 26px,
     $fw: 900,
-    $lh: 60px,
+    $lh: 42px,
     $ls: 0.06em,
     $tt: uppercase,
     $tal: center
   );
   color: var(--white);
-  max-width: 696px;
+  max-width: 365px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 60px;
+    max-width: 696px;
+  }
 }
+
 h2 {
-  @include font($fs: 36px, $fw: 700, $lh: 42px, $ls: 0.03em, $tal: center);
+  @include font($fs: 28px, $fw: 700, $lh: 33px, $ls: 0.03em, $tal: center);
   color: var(--black);
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    @include font($fs: 36px, $fw: 700, $lh: 42px, $ls: 0.03em, $tal: center);
+    padding-bottom: 50px;
+  }
 }
 h3 {
   @include font(
@@ -41,6 +52,10 @@ h3 {
     $tal: center
   );
 }
+h4 {
+  @include font($fs: 14px, $fw: 700, $lh: 16px);
+  color: var(--black);
+}
 .section {
   max-width: 1600px;
   padding-top: 94px;
@@ -50,13 +65,29 @@ h3 {
 
 .container {
   margin: auto;
-  width: 100%;
-  max-width: 1200px;
+  width: 468px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 .contacts {
-  @include font($fss: normal, $fs: 14px, $lh: 16px, $ls: 0.02em, $td: none);
+  @include font(
+    $fss: normal,
+    $fs: 12px,
+    $lh: 14px,
+    $fw: 500,
+    $ls: 0.02em,
+    $td: none
+  );
   color: var(--second-text-color);
   transition: 250ms, color, var(--transition-timing);
+
+  @media screen and (min-width: 1200px) {
+    @include font($fss: normal, $fs: 14px, $lh: 16px, $ls: 0.02em, $td: none);
+  }
 }
 .icon-social {
   transition: 250ms, fill, var(--transition-timing);

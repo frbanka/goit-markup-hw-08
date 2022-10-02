@@ -2,10 +2,6 @@
   outline: none;
   transition: 250ms, all, var(--transition-timing);
 }
-.list {
-  @include flex-nc-row-list;
-  gap: 30px;
-}
 .logo {
   @include font(
     $fss: normal,
@@ -23,6 +19,9 @@
   }
   &--white {
     color: var(--white);
+  }
+  @media screen and (max-width: 767px) {
+    padding-left: 13px;
   }
 }
 .button {

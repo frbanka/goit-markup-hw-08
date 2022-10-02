@@ -1,17 +1,27 @@
 .team {
   @include flex-column-list;
-  width: 1200px;
-  height: 100%;
+  flex-wrap: wrap;
+  width: 480px;
   margin: auto;
+  &__list {
+    @include flex-column-list;
+    gap: 30px;
+  }
   &__section {
     background: var(--background-color-light);
+    max-width: 480px;
   }
   &__person {
+    @include flex-columnflex;
     background: var(--white);
-    width: 270px;
-    height: 428px;
+    width: 450px;
+    height: 622px;
     box-shadow: var(--box-shadow-card);
     border-radius: 0px 0px 4px 4px;
+    img {
+      width: 450px;
+      height: 460px;
+    }
   }
   &__name {
     padding: 30px 0px 10px;
@@ -24,6 +34,7 @@
   &__socials {
     @include flex;
     padding-top: 16px;
+    padding-bottom: 24px;
   }
   &__icon-social {
     border: none;
@@ -35,6 +46,51 @@
       background-color: var(--main-color);
       fill: var(--white);
       transition: 250ms, fill background-color, var(--transition-timing);
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 768px;
+    &__section {
+      max-width: 768px;
+    }
+    &__list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 0px 15px 0px 15px;
+    }
+    &__person {
+      width: 354px;
+      height: 536px;
+      img {
+        width: 354px;
+        height: 374px;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    height: 100%;
+    &__section {
+      max-width: 1200px;
+    }
+    &__person {
+      width: 270px;
+      height: 428px;
+      img {
+        width: 270px;
+        height: 260px;
+      }
+    }
+    &__socials {
+      padding-top: 16px;
+      padding-bottom: 30px;
+    }
+    &__list {
+      @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        gap: 30px;
+      }
     }
   }
 }
