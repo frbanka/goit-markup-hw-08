@@ -1,3 +1,21 @@
+.mobile-menu {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 23px;
+}
+.hamburger {
+  fill: var(--black);
+  &:hover {
+    cursor: pointer;
+    fill: var(--main-color);
+  }
+  &__button {
+    background: none;
+    border: none;
+  }
+}
 .menu-hamburger {
   position: fixed;
   top: 0;
@@ -24,13 +42,6 @@
 .menu-hamburger.is-open {
   transform: translateX(0);
 }
-.mobile-menu {
-  display: flex;
-  height: 60px;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 23px;
-}
 .menu-mobile {
   position: relative;
   display: flex;
@@ -38,23 +49,18 @@
   gap: 36px;
   list-style: none;
 }
-.mobile-socials {
-  display: flex;
-  flex-flow: row wrap;
-  position: absolute;
-  bottom: 48px;
-  display: flex;
-  flex-direction: row;
+.mobile-item {
   list-style: none;
-  gap: 10px;
-  &__item--link {
+  &__link {
+    @include font($fs: 40px, $fw: 500, $lh: 47px, $ls: 0.02em, $td: none);
     font-family: var(--main-font);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0.02em;
-    color: var(--main-font);
-    text-decoration: none;
+    color: var(--black);
+    &:hover {
+      color: var(--main-color);
+    }
+    &--current {
+      color: var(--main-color);
+    }
   }
 }
 .mobile-contacts {
@@ -64,42 +70,41 @@
   flex-direction: column;
   gap: 32px;
   &__phone {
+    @include font($fs: 34px, $fw: 500, $lh: 40px, $ls: 0.02em, $td: none);
     font-family: var(--main-font);
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 40px;
-    letter-spacing: 0.02em;
-    text-decoration: none;
     color: var(--main-color);
   }
   &__mail {
+    @include font($fs: 24px, $fw: 500, $lh: 28px, $ls: 0.02em, $td: none);
     font-family: var(--main-font);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 0.02em;
     color: var(--second-text-color);
   }
 }
-.mobile-item {
+.mobile-socials {
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  bottom: 48px;
+  display: flex;
+  flex-direction: row;
   list-style: none;
-  &__link {
-    @include font($fs: 40px, $fw: 500, $lh: 47px, $ls: 0.02em);
+  gap: 20px;
+  &__item--link {
+    @include font($fs: 18px, $fw: 500, $lh: 22px, $ls: 0.02em, $td: none);
     font-family: var(--main-font);
-    text-decoration: none;
-    color: var(--black);
-  }
-}
-.hamburger {
-  fill: var(--black);
-  &:hover {
-    cursor: pointer;
-    fill: var(--main-color);
-  }
-  &__button {
-    background: none;
-    border: none;
+    color: var(--main-font);
+    &:not(#no-after):after {
+      position: absolute;
+      pointer-events: none;
+      content: "";
+      width: 22px;
+      height: 0px;
+      padding-left: 10px;
+      padding-right: 10px;
+      top: 10px;
+      border: 1px solid rgba(33, 33, 33, 0.2);
+      transform: rotate(90deg);
+    }
   }
 }
 .header {

@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="sass/main.css" />
   </head>
   <body>
-  
     <div class="modal is-hidden" id="modal" data-modal>
       <div class="modal__window">
         <button class="modal__button-close" data-modal-close>
@@ -81,11 +80,11 @@
               unchecked
               class="false-checkmark"
               required
-            /><span class="true-checkmark"></span>Oświadczam iż akceptuję
-            <a href="#" class="reglink">Regulamin</a>i<a
+            /><span class="true-checkmark"></span>&nbsp&nbspOświadczam iż akceptuję&nbsp 
+            <a href="#" class="reglink">Regulamin</a>&nbspi&nbsp<a
               href="#"
               class="reglink"
-              >Politykę Prywatności.</a
+              > Politykę Prywatności.</a
             >
           </label>
           <div class="modal__button-container">
@@ -597,6 +596,7 @@
         </div>
       </section>
     </footer>
+    
     <div class="menu-hamburger js-menu-container" id="mobilemenu">
 			<button class="menu-hamburger--close js-close-menu">
 				<img src="./images/close.png" alt="close x" />
@@ -604,7 +604,7 @@
 			</button>
 			<div>
 				<ul class="menu-mobile mobile-item">
-					<li><a href="#" class="mobile-item__link">Agencja</a></li>
+					<li><a href="#" class="mobile-item__link mobile-item__link--current">Agencja</a></li>
 					<li>
 						<a href="./portfolio.html" class="mobile-item__link">Portfolio</a>
 					</li>
@@ -632,8 +632,8 @@
 					<li class="mobile-socials__item">
 						<a class="mobile-socials__item--link" href="">Facebook</a>
 					</li>
-					<li class="mobile-socials">
-						<a class="mobile-socials__item--link" href="">LinkedIn</a>
+					<li class="mobile-socials__item">
+						<a class="mobile-socials__item--link" id="no-after" href="">LinkedIn</a>
 					</li>
 				</ul>
 			</div>
