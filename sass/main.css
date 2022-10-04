@@ -36,7 +36,7 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -1046,19 +1046,8 @@ h4 {
 }
 
 .portfolio {
-  max-width: 480px;
   padding: 94px 0px 94px 0px;
   margin: auto;
-}
-@media screen and (min-width: 768px) {
-  .portfolio {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .portfolio {
-    max-width: 1200px;
-  }
 }
 .portfolio__filter {
   display: flex;
@@ -1100,68 +1089,71 @@ h4 {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  height: 100%;
-  column-gap: 30px;
+  justify-content: center;
   gap: 30px;
+  padding: 0px 15px 0px 15px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .cards {
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cards {
+    padding: 0px;
+  }
 }
 .cards__item {
   position: relative;
   width: 100%;
   max-width: 450px;
   height: 404px;
-  border: 1px solid var(--cards-color);
-  border-width: 0px 1px 1px 1px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .cards__item {
-    width: 100%;
     max-width: 354px;
+  }
+  .cards__item#not-110 {
+    height: 440px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cards__item {
+    max-width: 370px;
   }
 }
 .cards__item:hover {
   cursor: pointer;
   box-shadow: var(--box-shadow-portfolio);
-  transition: 250ms, box-shadow, var(--transition-timing);
+  transition: 250ms box-shadow var(--transition-timing);
 }
 .cards__item:hover .cards__image .cards__overlay {
   cursor: pointer;
   visibility: visible;
   transform: translatey(0);
-  transition: 200ms, transform, ease;
+  transition: 250ms transform ease;
 }
 .cards__image {
   position: relative;
-  overflow: hidden;
-  width: 100%;
-  max-width: 450px;
+}
+.cards__image img {
   height: 294px;
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .cards__image {
-    max-width: 354px;
-  }
-}
 .cards__overlay {
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
   overflow: hidden;
   visibility: hidden;
   z-index: 0;
   top: 0;
   left: 0;
-  width: 450px;
+  width: 100%;
   height: 294px;
   background: rgba(33, 150, 243, 0.9);
   transform: translatey(100%);
-  transition-property: transform;
-  transition: 200ms ease;
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .cards__overlay {
-    width: 354px;
-  }
+  transition: 200ms transform ease;
 }
 .cards__overlay-text {
   margin: 0px 24px;
@@ -1181,22 +1173,22 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  max-height: 110px;
+  flex-wrap: wrap;
+  height: 110px;
   width: 100%;
-  max-width: 450px;
   bottom: 0;
-  z-index: 2;
+  z-index: 20;
   background: var(--white);
+  border: 1px solid var(--cards-color);
+  border-width: 0px 1px 1px 1px;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .cards__figcaption {
-    max-width: 354px;
-    max-height: 146px;
+  .cards__figcaption#not-110 {
+    height: 146px;
   }
 }
 .cards__title {
-  margin: 0px 0px 0px 24px;
+  padding: 0px 24px 0px 24px;
   color: var(--main-text-color);
   text-align: left;
   text-transform: none;
@@ -1207,8 +1199,13 @@ h4 {
   letter-spacing: 0.06em;
   text-decoration: none;
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .cards__title {
+    padding: 0px 24px 0px 24px;
+  }
+}
 .cards__description {
-  margin: 0px 24px 0px 24px;
+  padding: 0px 24px 0px 24px;
   color: var(--second-text-color);
   text-align: left;
   text-transform: none;

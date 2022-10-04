@@ -95,15 +95,29 @@
           </li>
         </ul>
         <ul class="cards">
-          <li class="cards__item">
+          <li class="cards__item" id="not-110">
             <figure>
               <div class="cards__image">
-                <img
-                  src="./images/technocrack.jpg"
-                  alt="laptop"
-                  width="450px"
-                  height="294px"
+                <picture>
+                <source
+                  srcset="./images/technocrack.jpg 1x,
+                  ./images/technocrack@2x.jpg 2x"
+                  media="(min-width: 1200px)"
                 />
+                <source
+                  srcset="./images/technocrack.jpg 1x,
+                  ./images/technocrack@2x.jpg 2x"
+                  media="(min-width: 768px)"
+                  
+                />
+                <source
+                  srcset="./images/technocrack.jpg 1x,
+                  ./images/technocrack@2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/technocrack.jpg" alt="laptop" />
+              </picture>
+                
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -113,20 +127,19 @@
                   </p>
                 </div>
               </div>
-              <figcaption class="cards__figcaption">
+              <figcaption class="cards__figcaption" id="not-110">
                 <p class="cards__title">Technocrack</p>
                 <p class="cards__description">Strona internetowa</p>
               </figcaption>
             </figure>
           </li>
-          <li class="cards__item">
+          <li class="cards__item" id="not-110">
             <figure>
               <div class="cards__image">
                 <img
                   src="./images/orlean-star.jpg"
                   alt="basketball players"
-                  width="450px"
-                  height="294px"
+                  srcset="./images/orlean-star@2x.jpg 2x"
                 />
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
@@ -137,7 +150,7 @@
                   </p>
                 </div>
               </div>
-              <figcaption class="cards__figcaption">
+              <figcaption class="cards__figcaption" id="not-110">
                 <p class="cards__title">Grafika New Orlean vs Golden Star</p>
                 <p class="cards__description">Dizajn</p>
               </figcaption>
@@ -148,9 +161,8 @@
               <div class="cards__image">
                 <img
                   src="./images/seafood.jpg"
+                  srcset="./images/seafood@2x.jpg 2x"
                   alt="seafood restaurant logo"
-                  width="450px"
-                  height="294px"
                 />
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
@@ -172,8 +184,8 @@
               <div class="cards__image">
                 <img
                   src="./images/prime.jpg"
-                  width="450px"
-                  height="294px"
+                  alt="photo of headphones"
+                  srcset="./images/prime@2x.jpg 2x"
                 />
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
@@ -196,8 +208,7 @@
                 <img
                   src="./images/boxes.jpg"
                   alt="photo of two boxes"
-                  width="450px"
-                  height="294px"
+                  srcset="./images/boxes@2x.jpg 2x"
                 />
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
@@ -220,8 +231,7 @@
                 <img
                   src="./images/inspiration.jpg"
                   alt="photo of computer"
-                  width="450px"
-                  height="294px"
+                  srcset="./images/inspiration@2x.jpg 2x"
                 />
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
@@ -244,8 +254,7 @@
                 <img
                   src="./images/magasine.jpg"
                   alt="photo of magasine"
-                  width="450px"
-                  height="294px"
+                  srcset="./images/magasine@2x.jpg 2x"
                 />
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
@@ -268,8 +277,7 @@
                 <img
                   src="./images/project-lab.jpg"
                   alt="photo of label on string"
-                  width="450px"
-                  height="294px"
+                  srcset="./images/project-lab@2x.jpg 2x"
                 />
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
@@ -292,8 +300,7 @@
                 <img
                   src="./images/growing.jpg"
                   alt="photo of laptop"
-                  width="450px"
-                  height="294px"
+                  srcset="./images/growing@2x.jpg 2x"
                 />
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
