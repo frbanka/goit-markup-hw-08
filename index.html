@@ -95,13 +95,13 @@
     </div>
     <header class="header">
       <div class="container">
-        <div class="mobile-menu">
+        <div class="mobile">
           <a class="logo" href="./index.html"
             ><span>Web</span><span class="logo--black">Studio</span>
           </a>
-          <button type="button" class="hamburger__button js-open-menu" aria-expanded="false"
+          <button type="button" class="mobile__hamburger js-open-menu" aria-expanded="false"
           aria-controls="mobilemenu">
-            <svg class="hamburger" height="16px" width="24px">
+            <svg class="mobile__hamburger-svg" height="16px" width="24px">
               <use href="./images/icons.svg#hamburger"></use>
             </svg>
           </button>
@@ -154,7 +154,7 @@
       <div class="container">
         <section>
           <ul class="features">
-            <div class="features__tablet">
+            <div class="features__table">
               <li>
                 <div class="features__item">
                   <svg height="70px" width="70px">
@@ -168,7 +168,7 @@
                 </p>
               </li>
             </div>
-            <div class="features__tablet">
+            <div class="features__table">
               <li>
                 <div class="features__item">
                   <svg height="70px" width="70px">
@@ -182,7 +182,7 @@
                 </p>
               </li>
             </div>
-            <div class="features__tablet">
+            <div class="features__table">
               <li>
                 <div class="features__item">
                   <svg height="70px" width="70px">
@@ -196,7 +196,7 @@
                 </p>
               </li>
             </div>
-            <div class="features__tablet">
+            <div class="features__table">
               <li>
                 <div class="features__item">
                   <svg height="70px" width="70px">
@@ -488,7 +488,7 @@
         <div class="clients">
           <h2>Nasi klienci</h2>
         </div>
-        <div class="clients__card">
+        <div class="clients__cards">
           <span class="clients__item">
             <svg width="41px" height="46.7px">
               <use href="./images/icons.svg#icon-client1"></use>
@@ -596,44 +596,44 @@
         </div>
       </section>
     </footer>
-    
-    <div class="menu-hamburger js-menu-container" id="mobilemenu">
-			<button class="menu-hamburger--close js-close-menu">
-				<img src="./images/close.png" alt="close x" />
-				</svg>
+    <div class="mobile-menu js-menu-container" id="mobilemenu">  
+			<button class="mobile-menu__close js-close-menu">
+				<svg height="16px" width="16px">
+              <use href="./images/icons.svg#icon-mobile-close"></use>
+            </svg>
 			</button>
 			<div>
-				<ul class="menu-mobile mobile-item">
-					<li><a href="#" class="mobile-item__link mobile-item__link--current">Agencja</a></li>
+				<ul class="mobile-menu__item">
+					<li><a href="#" class="mobile-menu__item--link mobile-menu__item--currlink">Agencja</a></li>
 					<li>
-						<a href="./portfolio.html" class="mobile-item__link">Portfolio</a>
+						<a href="./portfolio.html" class="mobile-menu__item--link">Portfolio</a>
 					</li>
-					<li><a href="#" class="mobile-item__link">Kontakt</a></li>
+					<li><a href="#" class="mobile-menu__item--link">Kontakt</a></li>
 				</ul>
-				<ul class="menu-mobile mobile-contacts">
+				<ul class="mobile-menu__item mobile-menu__contacts">
 					<li>
-						<a class="mobile-contacts__phone" href="tel:+48111111111"
+						<a class="mobile-menu__contacts--phone" href="tel:+48111111111"
 							>+48 111 111 111
 						</a>
 					</li>
 					<li>
-						<a class="mobile-contacts__mail" href="mailto:info@devstudio.com"
+						<a class="mobile-menu__contacts--mail" href="mailto:info@devstudio.com"
 							>info@devstudio.com
 						</a>
 					</li>
 				</ul>
-				<ul class="mobile-socials">
-					<li class="mobile-socials__item">
-						<a class="mobile-socials__item--link" href="">Instagram</a>
+				<ul class="mobile-menu__socials">
+					<li class="mobile-menu__socials-item">
+						<a class="mobile-menu__link" href="">Instagram</a>
 					</li>
-					<li class="mobile-socials__item">
-						<a class="mobile-socials__item--link" href="">Twitter</a>
+					<li class="mobile-menu__socials-item">
+						<a class="mobile-menu__link" href="">Twitter</a>
 					</li>
-					<li class="mobile-socials__item">
-						<a class="mobile-socials__item--link" href="">Facebook</a>
+					<li class="mobile-menu__socials-item">
+						<a class="mobile-menu__link" href="">Facebook</a>
 					</li>
-					<li class="mobile-socials__item">
-						<a class="mobile-socials__item--link" id="no-after" href="">LinkedIn</a>
+					<li class="mobile-menu__socials-item">
+						<a class="mobile-menu__link" id="no-after" href="">LinkedIn</a>
 					</li>
 				</ul>
 			</div>

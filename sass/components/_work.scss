@@ -1,13 +1,3 @@
-@media screen and (max-width: 767px) {
-  .work__section {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .work__section {
-    display: none;
-  }
-}
 .work {
   @include flex-column-list;
   width: 1200px;
@@ -39,5 +29,10 @@
     width: 100%;
     @include font($fw: 700, $fs: 14px, $lh: 16px, $ls: 0.03em);
     color: var(--white);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .work__section {
+    display: none;
   }
 }

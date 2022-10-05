@@ -4,13 +4,14 @@
   width: 100%;
   height: 100%;
   margin: auto;
-  &__list {
-    @include flex-column-list;
-    gap: 30px;
-  }
+  padding: 0px 15px 0px 15px;
   &__section {
     background: var(--background-color-light);
     max-width: 480px;
+  }
+  &__list {
+    @include flex-column-list;
+    gap: 30px;
   }
   &__person {
     @include flex-columnflex;
@@ -35,12 +36,13 @@
     border: none;
     border-radius: 50%;
     fill: var(--icon-color-light);
+    transition: 250ms all var(--transition-timing);
     &:hover,
     &:focus {
       cursor: pointer;
       background-color: var(--main-color);
       fill: var(--white);
-      transition: 250ms, fill background-color, var(--transition-timing);
+      transition: 250ms all var(--transition-timing);
     }
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -52,7 +54,6 @@
       flex-direction: row;
       flex-wrap: wrap;
       gap: 30px;
-      padding: 0px 15px 0px 15px;
     }
     &__person {
       width: 354px;

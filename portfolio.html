@@ -20,13 +20,17 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="mobile-menu">
+        <div class="mobile">
           <a class="logo" href="./index.html"
             ><span>Web</span><span class="logo--black">Studio</span>
           </a>
-          <button type="button" class="hamburger__button js-open-menu" aria-expanded="false"
-          aria-controls="mobilemenu">
-            <svg class="hamburger" height="16px" width="24px">
+          <button
+            type="button"
+            class="mobile__hamburger js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobilemenu"
+          >
+            <svg class="mobile__hamburger-svg" height="16px" width="24px">
               <use href="./images/icons.svg#hamburger"></use>
             </svg>
           </button>
@@ -41,7 +45,9 @@
                 <a class="link" href="./index.html">Agencja</a>
               </li>
               <li>
-                <a class="link link--current" href="./portfolio.html">Portfolio</a>
+                <a class="link link--current" href="./portfolio.html"
+                  >Portfolio</a
+                >
               </li>
               <li><a class="link" href="#">Kontakt</a></li>
             </ul>
@@ -66,7 +72,7 @@
       </div>
     </header>
     <section class="portfolio">
-      <div class="container">
+      <div class="container portfolio__container">
         <ul class="portfolio__filter">
           <li>
             <button class="button portfolio__button" type="button">
@@ -99,25 +105,29 @@
             <figure>
               <div class="cards__image">
                 <picture>
-                <source
-                  srcset="./images/technocrack.jpg 1x,
-                  ./images/technocrack@2x.jpg 2x"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="./images/technocrack.jpg 1x,
-                  ./images/technocrack@2x.jpg 2x"
-                  media="(min-width: 768px)"
-                  
-                />
-                <source
-                  srcset="./images/mobile-technocrack.jpg 1x,
-                  ./images/mobile-technocrack@2x.jpg 2x"
-                  media="(min-width: 320px)"
-                />
-                <img src="./images/technocrack.jpg" alt="laptop" />
-              </picture>
-                
+                  <source
+                    srcset="
+                      ./images/technocrack.jpg    1x,
+                      ./images/technocrack@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/technocrack.jpg    1x,
+                      ./images/technocrack@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile-technocrack.jpg    1x,
+                      ./images/mobile-technocrack@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img src="./images/technocrack.jpg" alt="laptop" />
+                </picture>
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -137,23 +147,32 @@
             <figure>
               <div class="cards__image">
                 <picture>
-                <source
-                  srcset="./images/orlean-star.jpg 1x,
-                  ./images/orlean-star@2x.jpg 2x"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="./images/orlean-star.jpg 1x,
-                  ./images/orlean-star@2x.jpg 2x"
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="./images/mobile-orlean-star.jpg 1x,
-                  ./images/mobile-orlean-star@2x.jpg 2x"
-                  media="(min-width: 320px)"
-                />
-                <img src="./images/orlean-star.jpg" alt="basketball players" />
-              </picture>
+                  <source
+                    srcset="
+                      ./images/orlean-star.jpg    1x,
+                      ./images/orlean-star@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/orlean-star.jpg    1x,
+                      ./images/orlean-star@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile-orlean-star.jpg    1x,
+                      ./images/mobile-orlean-star@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    src="./images/orlean-star.jpg"
+                    alt="basketball players"
+                  />
+                </picture>
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -173,23 +192,23 @@
             <figure>
               <div class="cards__image">
                 <picture>
-                <source
-                  srcset="./images/seafood.jpg 1x,
-                  ./images/seafood@2x.jpg 2x"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="./images/seafood.jpg 1x,
-                  ./images/seafood@2x.jpg 2x"
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="./images/mobile-seafood.jpg 1x,
-                  ./images/mobile-seafood@2x.jpg 2x"
-                  media="(min-width: 320px)"
-                />
-                <img src="./images/seafood.jpg" alt="restaurant fish logo" />
-              </picture>
+                  <source
+                    srcset="./images/seafood.jpg 1x, ./images/seafood@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/seafood.jpg 1x, ./images/seafood@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile-seafood.jpg    1x,
+                      ./images/mobile-seafood@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img src="./images/seafood.jpg" alt="restaurant fish logo" />
+                </picture>
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -209,23 +228,23 @@
             <figure>
               <div class="cards__image">
                 <picture>
-                <source
-                  srcset="./images/prime.jpg 1x,
-                  ./images/prime@2x.jpg 2x"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="./images/prime.jpg 1x,
-                  ./images/prime@2x.jpg 2x"
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="./images/mobile-prime.jpg 1x,
-                  ./images/mobile-prime@2x.jpg 2x"
-                  media="(min-width: 320px)"
-                />
-                <img src="./images/prime.jpg" alt="headphones" />
-              </picture>
+                  <source
+                    srcset="./images/prime.jpg 1x, ./images/prime@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/prime.jpg 1x, ./images/prime@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile-prime.jpg    1x,
+                      ./images/mobile-prime@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img src="./images/prime.jpg" alt="headphones" />
+                </picture>
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -245,23 +264,23 @@
             <figure>
               <div class="cards__image">
                 <picture>
-                <source
-                  srcset="./images/boxes.jpg 1x,
-                  ./images/boxes@2x.jpg 2x"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="./images/boxes.jpg 1x,
-                  ./images/boxes@2x.jpg 2x"
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="./images/mobile-boxes.jpg 1x,
-                  ./images/mobile-boxes@2x.jpg 2x"
-                  media="(min-width: 320px)"
-                />
-                <img src="./images/boxes.jpg" alt="two boxes" />
-              </picture>
+                  <source
+                    srcset="./images/boxes.jpg 1x, ./images/boxes@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/boxes.jpg 1x, ./images/boxes@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile-boxes.jpg    1x,
+                      ./images/mobile-boxes@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img src="./images/boxes.jpg" alt="two boxes" />
+                </picture>
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -280,25 +299,33 @@
           <li class="cards__item">
             <figure>
               <div class="cards__image">
-                
                 <picture>
-                <source
-                  srcset="./images/inspiration.jpg 1x,
-                  ./images/inspiration@2x.jpg 2x"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="./images/inspiration.jpg 1x,
-                  ./images/inspiration@2x.jpg 2x"
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="./images/mobile-inspiration.jpg 1x,
-                  ./images/mobile-inspiration@2x.jpg 2x"
-                  media="(min-width: 320px)"
-                />
-                <img src="./images/inspiration.jpg" alt="apple imac computer" />
-              </picture>
+                  <source
+                    srcset="
+                      ./images/inspiration.jpg    1x,
+                      ./images/inspiration@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/inspiration.jpg    1x,
+                      ./images/inspiration@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile-inspiration.jpg    1x,
+                      ./images/mobile-inspiration@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    src="./images/inspiration.jpg"
+                    alt="apple imac computer"
+                  />
+                </picture>
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -318,23 +345,29 @@
             <figure>
               <div class="cards__image">
                 <picture>
-                <source
-                  srcset="./images/magasine.jpg 1x,
-                  ./images/magasine@2x.jpg 2x"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="./images/magasine.jpg 1x,
-                  ./images/magasine@2x.jpg 2x"
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="./images/mobile-magasine.jpg 1x,
-                  ./images/mobile-magasine@2x.jpg 2x"
-                  media="(min-width: 320px)"
-                />
-                <img src="./images/magasine.jpg" alt="newspaper magasine" />
-              </picture>
+                  <source
+                    srcset="
+                      ./images/magasine.jpg    1x,
+                      ./images/magasine@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/magasine.jpg    1x,
+                      ./images/magasine@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile-magasine.jpg    1x,
+                      ./images/mobile-magasine@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img src="./images/magasine.jpg" alt="newspaper magasine" />
+                </picture>
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -354,23 +387,29 @@
             <figure>
               <div class="cards__image">
                 <picture>
-                <source
-                  srcset="./images/project-lab.jpg 1x,
-                  ./images/project-lab@2x.jpg 2x"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="./images/project-lab.jpg 1x,
-                  ./images/project-lab@2x.jpg 2x"
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="./images/mobile-project-lab.jpg 1x,
-                  ./images/mobile-project-lab@2x.jpg 2x"
-                  media="(min-width: 320px)"
-                />
-                <img src="./images/project-lab.jpg" alt="cog tag with text" />
-              </picture>
+                  <source
+                    srcset="
+                      ./images/project-lab.jpg    1x,
+                      ./images/project-lab@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/project-lab.jpg    1x,
+                      ./images/project-lab@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile-project-lab.jpg    1x,
+                      ./images/mobile-project-lab@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img src="./images/project-lab.jpg" alt="cog tag with text" />
+                </picture>
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -390,23 +429,23 @@
             <figure>
               <div class="cards__image">
                 <picture>
-                <source
-                  srcset="./images/growing.jpg 1x,
-                  ./images/growing@2x.jpg 2x"
-                  media="(min-width: 1200px)"
-                />
-                <source
-                  srcset="./images/growing.jpg 1x,
-                  ./images/growing@2x.jpg 2x"
-                  media="(min-width: 768px)"
-                />
-                <source
-                  srcset="./images/mobile-growing.jpg 1x,
-                  ./images/mobile-growing@2x.jpg 2x"
-                  media="(min-width: 320px)"
-                />
-                <img src="./images/growing.jpg" alt="man writing on laptop" />
-              </picture>
+                  <source
+                    srcset="./images/growing.jpg 1x, ./images/growing@2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="./images/growing.jpg 1x, ./images/growing@2x.jpg 2x"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile-growing.jpg    1x,
+                      ./images/mobile-growing@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img src="./images/growing.jpg" alt="man writing on laptop" />
+                </picture>
                 <div class="cards__overlay">
                   <p class="cards__overlay-text">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -499,47 +538,56 @@
         </div>
       </section>
     </footer>
-    <div class="menu-hamburger js-menu-container" id="mobilemenu">
-			<button class="menu-hamburger--close js-close-menu">
-				<img src="./images/close.png" alt="close x" />
-				</svg>
-			</button>
-			<div>
-				<ul class="menu-mobile mobile-item">
-					<li><a href="./index.html" class="mobile-item__link">Agencja</a></li>
-					<li>
-						<a href="./portfolio.html" class="mobile-item__link mobile-item__link--current">Portfolio</a>
-					</li>
-					<li><a href="#" class="mobile-item__link">Kontakt</a></li>
-				</ul>
-				<ul class="menu-mobile mobile-contacts">
-					<li>
-						<a class="mobile-contacts__phone" href="tel:+48111111111"
-							>+48 111 111 111
-						</a>
-					</li>
-					<li>
-						<a class="mobile-contacts__mail" href="mailto:info@devstudio.com"
-							>info@devstudio.com
-						</a>
-					</li>
-				</ul>
-				<ul class="mobile-socials">
-					<li class="mobile-socials__item">
-						<a class="mobile-socials__item--link" href="">Instagram</a>
-					</li>
-					<li class="mobile-socials__item">
-						<a class="mobile-socials__item--link" href="">Twitter</a>
-					</li>
-					<li class="mobile-socials__item">
-						<a class="mobile-socials__item--link" href="">Facebook</a>
-					</li>
-					<li class="mobile-socials__item">
-						<a class="mobile-socials__item--link" id="no-after" href="">LinkedIn</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+    <div class="mobile-menu js-menu-container" id="mobilemenu">
+      <button class="mobile-menu__close js-close-menu">
+        <svg height="16px" width="16px">
+          <use href="./images/icons.svg#icon-mobile-close"></use>
+        </svg>
+      </button>
+      <div>
+        <ul class="mobile-menu__item">
+          <li>
+            <a href="#" class="mobile-menu__item--link">Agencja</a>
+          </li>
+          <li>
+            <a
+              href="./portfolio.html"
+              class="mobile-menu__item--link mobile-menu__item--currlink"
+              >Portfolio</a
+            >
+          </li>
+          <li><a href="#" class="mobile-menu__item--link">Kontakt</a></li>
+        </ul>
+        <ul class="mobile-menu__item mobile-menu__contacts">
+          <li>
+            <a class="mobile-menu__contacts--phone" href="tel:+48111111111"
+              >+48 111 111 111
+            </a>
+          </li>
+          <li>
+            <a
+              class="mobile-menu__contacts--mail"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com
+            </a>
+          </li>
+        </ul>
+        <ul class="mobile-menu__socials">
+          <li class="mobile-menu__socials-item">
+            <a class="mobile-menu__link" href="">Instagram</a>
+          </li>
+          <li class="mobile-menu__socials-item">
+            <a class="mobile-menu__link" href="">Twitter</a>
+          </li>
+          <li class="mobile-menu__socials-item">
+            <a class="mobile-menu__link" href="">Facebook</a>
+          </li>
+          <li class="mobile-menu__socials-item">
+            <a class="mobile-menu__link" id="no-after" href="">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"

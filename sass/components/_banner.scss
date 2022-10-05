@@ -1,12 +1,3 @@
-/*@media screen and (max-width: 767px)*/
-/*mobile-first*/
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .background {
-    background-image: url(../../images/bg@2x.jpg);
-  }
-}
 .banner {
   @include flex;
   background-image: linear-gradient(
@@ -19,18 +10,17 @@
   background-position: center;
   background-size: cover;
   height: 400px;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url("../images/main-background@2x.jpg");
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 600px;
+  }
   &__flex {
     @include flex-columnflex;
     gap: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .banner {
-    max-width: 1600px;
-    height: 600px;
-    &__flex {
-      padding-top: 94px;
-    }
   }
 }

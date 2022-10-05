@@ -1,22 +1,24 @@
-.mobile-menu {
+.mobile {
   display: flex;
   height: 60px;
   align-items: center;
   justify-content: space-between;
   padding-right: 23px;
-}
-.hamburger {
-  fill: var(--black);
-  &:hover {
-    cursor: pointer;
-    fill: var(--main-color);
-  }
-  &__button {
+  &__hamburger {
     background: none;
     border: none;
+    &-svg {
+      fill: var(--black);
+      transition: 250ms fill var(--transition-timing);
+      &:hover {
+        cursor: pointer;
+        fill: var(--main-color);
+        transition: 250ms fill var(--transition-timing);
+      }
+    }
   }
 }
-.menu-hamburger {
+.mobile-menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -27,69 +29,64 @@
   z-index: 10;
   transform: translateX(100%);
   transition: all 250ms ease-in-out;
-  &--close {
+  &__close {
     background: none;
     border: none;
     cursor: pointer;
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: 21px;
+    right: 25px;
+    &:hover,
+    :focus {
+      fill: var(--main-color);
+    }
   }
-  @media (min-width: 768px) {
-    display: none;
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    list-style: none;
+    &--link {
+      @include font($fs: 40px, $fw: 500, $lh: 47px, $ls: 0.02em, $td: none);
+      font-family: var(--main-font);
+      color: var(--black);
+      &:hover {
+        color: var(--main-color);
+      }
+    }
+    &--currlink {
+      color: var(--main-color);
+    }
   }
-}
-.menu-hamburger.is-open {
-  transform: translateX(0);
-}
-.menu-mobile {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-  list-style: none;
-}
-.mobile-item {
-  list-style: none;
+  &__contacts {
+    position: absolute;
+    bottom: 134px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    &--phone {
+      @include font($fs: 34px, $fw: 500, $lh: 40px, $ls: 0.02em, $td: none);
+      font-family: var(--main-font);
+      color: var(--main-color);
+    }
+    &--mail {
+      @include font($fs: 24px, $fw: 500, $lh: 28px, $ls: 0.02em, $td: none);
+      font-family: var(--main-font);
+      color: var(--second-text-color);
+    }
+  }
+  &__socials {
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    bottom: 48px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+  }
   &__link {
-    @include font($fs: 40px, $fw: 500, $lh: 47px, $ls: 0.02em, $td: none);
-    font-family: var(--main-font);
-    color: var(--black);
-    &:hover {
-      color: var(--main-color);
-    }
-    &--current {
-      color: var(--main-color);
-    }
-  }
-}
-.mobile-contacts {
-  position: absolute;
-  bottom: 134px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  &__phone {
-    @include font($fs: 34px, $fw: 500, $lh: 40px, $ls: 0.02em, $td: none);
-    font-family: var(--main-font);
-    color: var(--main-color);
-  }
-  &__mail {
-    @include font($fs: 24px, $fw: 500, $lh: 28px, $ls: 0.02em, $td: none);
-    font-family: var(--main-font);
-    color: var(--second-text-color);
-  }
-}
-.mobile-socials {
-  display: flex;
-  flex-flow: row wrap;
-  position: absolute;
-  bottom: 48px;
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  gap: 20px;
-  &__item--link {
     @include font($fs: 18px, $fw: 500, $lh: 22px, $ls: 0.02em, $td: none);
     font-family: var(--main-font);
     color: var(--main-font);
@@ -107,22 +104,19 @@
     }
   }
 }
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
 .header {
   margin: auto;
   background: var(--white);
   border: 1px solid #ececec;
   border-width: 0px 0px 1px 0px;
-  &__contacts {
-    display: none;
-  }
   &__flex {
     display: none;
   }
-  &__navigation {
-    display: none;
-  }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    .mobile-menu {
+    .mobile {
       display: none;
     }
     .header {
@@ -167,7 +161,7 @@
     }
   }
   @media screen and (min-width: 1200px) {
-    .mobile-menu {
+    .mobile {
       display: none;
     }
     .header {

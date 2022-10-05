@@ -1,6 +1,9 @@
 .portfolio {
   padding: 94px 0px 94px 0px;
   margin: auto;
+  &__container {
+    padding: 0px 15px 0px 15px;
+  }
   &__filter {
     @include flex-nc-list;
     flex-wrap: wrap;
@@ -18,55 +21,29 @@
     @include font($fw: 500, $ls: 0.03em, $tal: center);
     color: var(--main-text-color);
     background-color: var(--background-color-light);
-    transition: 250ms, color background-color, var(--transition-timing);
+    transition: 250ms all var(--transition-timing);
     &:hover,
     &:focus {
       box-shadow: var(--box-shadow-filter);
       color: var(--white);
       background-color: var(--main-color);
-      transition: 250ms, color background-color, var(--transition-timing);
+      transition: 250ms all var(--transition-timing);
     }
   }
 }
 .cards {
   @include flex-nc-wrap-list;
+  position: relative;
   justify-content: center;
   gap: 30px;
-  padding: 0px 15px 0px 15px;
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding: 0px;
   }
   @media screen and (min-width: 1200px) {
     padding: 0px;
   }
-  &__item {
-    position: relative;
-    width: 100%;
-    max-width: 450px;
-    height: 404px;
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      max-width: 354px;
-      &#not-110 {
-        height: 440px;
-      }
-    }
-    @media screen and (min-width: 1200px) {
-      max-width: 370px;
-    }
-    &:hover {
-      cursor: pointer;
-      box-shadow: var(--box-shadow-portfolio);
-      transition: 250ms box-shadow var(--transition-timing);
-    }
-    &:hover .cards__image .cards__overlay {
-      cursor: pointer;
-      visibility: visible;
-      transform: translatey(0);
-      transition: 250ms transform ease;
-    }
-  }
   &__image {
-    position: relative;
+    transition: 250ms all ease;
     & img {
       height: 294px;
     }
@@ -74,7 +51,6 @@
   &__overlay {
     @include flex;
     position: absolute;
-    overflow: hidden;
     visibility: hidden;
     z-index: 0;
     top: 0;
@@ -83,7 +59,7 @@
     height: 294px;
     background: rgba(33, 150, 243, 0.9);
     transform: translatey(100%);
-    transition: 200ms transform ease;
+    transition: 250ms all ease;
 
     &-text {
       margin: 0px 24px;
@@ -97,6 +73,34 @@
         $ls: 0.03em,
         $tal: left
       );
+    }
+  }
+  &__item {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+    height: 404px;
+    transition: 250ms box-shadow var(--transition-timing);
+    &:hover {
+      cursor: pointer;
+      box-shadow: var(--box-shadow-portfolio);
+      transition: 250ms box-shadow var(--transition-timing);
+    }
+    &:hover .cards__image .cards__overlay {
+      cursor: pointer;
+      visibility: visible;
+      transform: translatey(0);
+      transition: 250ms transform ease;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      max-width: 354px;
+      &#not-110 {
+        height: 440px;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 370px;
     }
   }
   &__figcaption {

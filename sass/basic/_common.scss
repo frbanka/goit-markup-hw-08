@@ -25,7 +25,6 @@ h1 {
   );
   color: var(--white);
   max-width: 365px;
-
   @media screen and (min-width: 1200px) {
     font-size: 44px;
     line-height: 60px;
@@ -38,7 +37,8 @@ h2 {
   color: var(--black);
   padding-bottom: 30px;
   @media screen and (min-width: 1200px) {
-    @include font($fs: 36px, $fw: 700, $lh: 42px, $ls: 0.03em, $tal: center);
+    font-size: 36px;
+    line-height: 42px;
     padding-bottom: 50px;
   }
 }
@@ -62,7 +62,6 @@ h4 {
   padding-bottom: 94px;
   margin: auto;
 }
-
 .container {
   margin: 0 auto;
   width: 100%;
@@ -79,12 +78,12 @@ h4 {
     $td: none
   );
   color: var(--second-text-color);
-  transition: 250ms, color, var(--transition-timing);
-
+  transition: 250ms color var(--transition-timing);
   @media screen and (min-width: 1200px) {
-    @include font($fss: normal, $fs: 14px, $lh: 16px, $ls: 0.02em, $td: none);
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 .icon-social {
-  transition: 250ms, fill, var(--transition-timing);
+  transition: 250ms fill var(--transition-timing);
 }
