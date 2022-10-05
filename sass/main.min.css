@@ -201,12 +201,14 @@ h4 {
   color: var(--white);
   transition: 250ms, color background-color, var(--transition-timing);
 }
-.submit-button:hover, .submit-button:focus {
+.submit-button:hover,
+.submit-button:focus {
   background-color: var(--white);
   color: var(--black);
   transition: 250ms, color background-color, var(--transition-timing);
 }
-.submit-button:hover svg, .submit-button:focus svg {
+.submit-button:hover svg,
+.submit-button:focus svg {
   fill: var(--black);
   transition: 250ms, fill, var(--transition-timing);
 }
@@ -392,11 +394,13 @@ h4 {
     justify-content: left;
     gap: 8px;
   }
-  .header .header__contacts-flex:focus .header__contacts-icons, .header .header__contacts-flex:hover .header__contacts-icons {
+  .header .header__contacts-flex:focus .header__contacts-icons,
+  .header .header__contacts-flex:hover .header__contacts-icons {
     fill: var(--main-color);
     transition: 250ms, fill, var(--transition-timing);
   }
-  .header .header__contacts-flex:focus .contacts, .header .header__contacts-flex:hover .contacts {
+  .header .header__contacts-flex:focus .contacts,
+  .header .header__contacts-flex:hover .contacts {
     color: var(--main-color);
     transition: 250ms, fill, var(--transition-timing);
   }
@@ -438,11 +442,13 @@ h4 {
     align-items: center;
     justify-content: center;
   }
-  .header .header__contacts-flex:focus .header__contacts-icons, .header .header__contacts-flex:hover .header__contacts-icons {
+  .header .header__contacts-flex:focus .header__contacts-icons,
+  .header .header__contacts-flex:hover .header__contacts-icons {
     fill: var(--main-color);
     transition: 250ms, fill, var(--transition-timing);
   }
-  .header .header__contacts-flex:focus .contacts, .header .header__contacts-flex:hover .contacts {
+  .header .header__contacts-flex:focus .contacts,
+  .header .header__contacts-flex:hover .contacts {
     color: var(--main-color);
     transition: 250ms, fill, var(--transition-timing);
   }
@@ -466,7 +472,8 @@ h4 {
   font-family: var(--main-font);
   transition: 250ms, color, var(--transition-timing);
 }
-.link:hover, .link:focus {
+.link:hover,
+.link:focus {
   color: var(--main-color);
   transition: 250ms, color, var(--transition-timing);
 }
@@ -584,7 +591,8 @@ h4 {
   fill: var(--icon-color-dark);
   transition: 250ms fill var(--transition-timing);
 }
-.footer__icon-social:hover, .footer__icon-social:focus {
+.footer__icon-social:hover,
+.footer__icon-social:focus {
   cursor: pointer;
   fill: var(--main-color);
   transition: 250ms fill var(--transition-timing);
@@ -641,13 +649,20 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url("../images/main-background.jpg");
+  background-image: linear-gradient(
+      0deg,
+      rgba(47, 48, 58, 0.4) 0%,
+      rgba(47, 48, 58, 0.4) 100%
+    ),
+    url("../images/main-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 400px;
 }
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .banner {
     background-image: url("../images/main-background@2x.jpg");
   }
@@ -704,7 +719,8 @@ h4 {
     width: 170px;
   }
 }
-.clients__item:hover, .clients__item:focus {
+.clients__item:hover,
+.clients__item:focus {
   cursor: pointer;
   fill: var(--main-color);
   border: 1px solid var(--main-color);
@@ -1045,7 +1061,8 @@ h4 {
   background-color: var(--background-color-light);
   transition: 250ms all var(--transition-timing);
 }
-.portfolio__button:hover, .portfolio__button:focus {
+.portfolio__button:hover,
+.portfolio__button:focus {
   box-shadow: var(--box-shadow-filter);
   color: var(--white);
   background-color: var(--main-color);
@@ -1239,7 +1256,8 @@ h4 {
   fill: var(--icon-color-light);
   transition: 250ms all var(--transition-timing);
 }
-.team__icon-social:hover, .team__icon-social:focus {
+.team__icon-social:hover,
+.team__icon-social:focus {
   cursor: pointer;
   background-color: var(--main-color);
   fill: var(--white);
@@ -1351,4 +1369,4 @@ h4 {
   .work__section {
     display: none;
   }
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.min.css.map */
