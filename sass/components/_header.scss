@@ -115,95 +115,6 @@
   &__flex {
     display: none;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    .mobile {
-      display: none;
-    }
-    .header {
-      max-width: 768px;
-    }
-    .header__flex {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 80px;
-      padding: 0px 15px 0px 15px;
-    }
-    .header__navigation {
-      @include flex-nc-list;
-      gap: 60px;
-    }
-    .header__contacts {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      gap: 10px;
-      margin: 0;
-      &-flex {
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        gap: 8px;
-        &:focus .header__contacts-icons,
-        &:hover .header__contacts-icons {
-          fill: var(--main-color);
-          transition: 250ms, fill, var(--transition-timing);
-        }
-        &:focus .contacts,
-        &:hover .contacts {
-          color: var(--main-color);
-          transition: 250ms, fill, var(--transition-timing);
-        }
-      }
-      &-icons {
-        fill: var(--second-text-color);
-      }
-    }
-  }
-  @media screen and (min-width: 1200px) {
-    .mobile {
-      display: none;
-    }
-    .header {
-      max-width: 1600px;
-    }
-    .header__flex {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 80px;
-      gap: 93px;
-      padding: 0px 15px 0px 15px;
-    }
-    .header__navigation {
-      @include flex-nc-list;
-      gap: 46px;
-    }
-    .header__contacts {
-      @include flex-listflex;
-      gap: 50px;
-      margin-right: 0px;
-      margin-left: auto;
-      &-flex {
-        @include flex;
-        &:focus .header__contacts-icons,
-        &:hover .header__contacts-icons {
-          fill: var(--main-color);
-          transition: 250ms, fill, var(--transition-timing);
-        }
-        &:focus .contacts,
-        &:hover .contacts {
-          color: var(--main-color);
-          transition: 250ms, fill, var(--transition-timing);
-        }
-      }
-      &-icons {
-        margin-left: 0px;
-        margin-right: 10px;
-        fill: var(--second-text-color);
-      }
-    }
-  }
 }
 .link {
   @include font(
@@ -236,6 +147,95 @@
       top: 45px;
       background: var(--main-color);
       border-radius: 2px;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .mobile {
+    display: none;
+  }
+  .header {
+    max-width: 768px;
+  }
+  .header__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0px 15px 0px 15px;
+  }
+  .header__navigation {
+    @include flex-nc-list;
+    gap: 60px;
+  }
+  .header__contacts {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    &-flex {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 8px;
+      &:focus .header__contacts-icons,
+      &:hover .header__contacts-icons {
+        fill: var(--main-color);
+        transition: 250ms, fill, var(--transition-timing);
+      }
+      &:focus .contacts,
+      &:hover .contacts {
+        color: var(--main-color);
+        transition: 250ms, fill, var(--transition-timing);
+      }
+    }
+    &-icons {
+      fill: var(--second-text-color);
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mobile {
+    display: none;
+  }
+  .header {
+    max-width: 1600px;
+  }
+  .header__flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    gap: 93px;
+    padding: 0px 15px 0px 15px;
+  }
+  .header__navigation {
+    @include flex-nc-list;
+    gap: 46px;
+  }
+  .header__contacts {
+    @include flex-listflex;
+    gap: 50px;
+    margin-right: 0px;
+    margin-left: auto;
+    &-flex {
+      @include flex;
+      &:focus .header__contacts-icons,
+      &:hover .header__contacts-icons {
+        fill: var(--main-color);
+        transition: 250ms, fill, var(--transition-timing);
+      }
+      &:focus .contacts,
+      &:hover .contacts {
+        color: var(--main-color);
+        transition: 250ms, fill, var(--transition-timing);
+      }
+    }
+    &-icons {
+      margin-left: 0px;
+      margin-right: 10px;
+      fill: var(--second-text-color);
     }
   }
 }

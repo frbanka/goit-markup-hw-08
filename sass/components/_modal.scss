@@ -18,10 +18,6 @@
     border-radius: 4px;
     background: var(--white);
     box-shadow: var(--box-shadow-card);
-    @media screen and (min-width: 1200px) {
-      max-width: 528px;
-      height: 581px;
-    }
   }
   &__button-container {
     @include flex;
@@ -52,9 +48,6 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: 250ms all var(--transition-timing);
-    @media screen and (min-width: 1200px) {
-      width: 448px;
-    }
     &:focus {
       border: 1px solid var(--main-color);
       border-radius: 4px;
@@ -76,9 +69,6 @@
         $ls: 0.01em,
         $tal: left
       );
-      @media screen and (min-width: 1200px) {
-        max-width: 448px;
-      }
       &:focus-within svg {
         fill: var(--main-color);
         transition: 250ms all var(--transition-timing);
@@ -104,10 +94,6 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: 250ms all var(--transition-timing);
-    @media screen and (min-width: 1200px) {
-      max-width: 448px;
-      font-size: 12px;
-    }
     &:focus {
       border: 1px solid var(--main-color);
       border-radius: 4px;
@@ -129,10 +115,6 @@
       $ls: 0.03em,
       $tal: center
     );
-    @media screen and (min-width: 1200px) {
-      max-width: 100%;
-      flex-wrap: nowrap;
-    }
   }
   &__checkbox {
     @include flex-rowflex;
@@ -144,10 +126,30 @@
     @include font($fss: normal, $fs: 12px, $fw: 400, $lh: 24px, $ls: 0.03em);
     font-family: var(--main-font);
     color: var(--second-text-color);
-    @media screen and (min-width: 1200px) {
-      max-width: 100%;
-      font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal__window {
+    max-width: 528px;
+    height: 581px;
+  }
+  .modal__input {
+    width: 448px;
+    &-label {
+      max-width: 448px;
     }
+  }
+  .modal__comment-area {
+    max-width: 448px;
+    font-size: 12px;
+  }
+  .modal__title {
+    max-width: 100%;
+    flex-wrap: nowrap;
+  }
+  .modal__checkbox {
+    max-width: 100%;
+    font-size: 14px;
   }
 }
 .false-checkmark {

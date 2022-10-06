@@ -20,7 +20,9 @@
   &--white {
     color: var(--white);
   }
-  @media screen and (max-width: 767px) {
+}
+@media screen and (max-width: 767px) {
+  .logo {
     padding-left: 13px;
   }
 }

@@ -25,22 +25,12 @@ h1 {
   );
   color: var(--white);
   max-width: 365px;
-  @media screen and (min-width: 1200px) {
-    font-size: 44px;
-    line-height: 60px;
-    max-width: 696px;
-  }
 }
 
 h2 {
   @include font($fs: 28px, $fw: 700, $lh: 33px, $ls: 0.03em, $tal: center);
   color: var(--black);
   padding-bottom: 30px;
-  @media screen and (min-width: 1200px) {
-    font-size: 36px;
-    line-height: 42px;
-    padding-bottom: 50px;
-  }
 }
 h3 {
   @include font(
@@ -79,11 +69,23 @@ h4 {
   );
   color: var(--second-text-color);
   transition: 250ms color var(--transition-timing);
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    line-height: 16px;
-  }
 }
 .icon-social {
   transition: 250ms fill var(--transition-timing);
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 42px;
+    padding-bottom: 50px;
+  }
+  h1 {
+    font-size: 44px;
+    line-height: 60px;
+    max-width: 696px;
+  }
 }

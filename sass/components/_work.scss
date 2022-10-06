@@ -6,10 +6,6 @@
   &__list {
     @include flex-column-list;
     gap: 30px;
-    @media screen and (min-width: 1200px) {
-      @include flex-nc-row-list;
-      gap: 30px;
-    }
   }
   &__card {
     position: relative;
@@ -29,6 +25,12 @@
     width: 100%;
     @include font($fw: 700, $fs: 14px, $lh: 16px, $ls: 0.03em);
     color: var(--white);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .work__list {
+    @include flex-nc-row-list;
+    gap: 30px;
   }
 }
 @media screen and (max-width: 1199px) {

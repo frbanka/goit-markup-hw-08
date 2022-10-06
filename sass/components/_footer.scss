@@ -91,7 +91,9 @@
     gap: 10px;
     padding-top: 20px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer {
     height: 463px;
     &__container {
       flex-direction: row;
@@ -105,7 +107,9 @@
       flex-basis: calc(100% / 2);
     }
   }
-  @media screen and (min-width: 1200px) {
+}
+@media screen and (min-width: 1200px) {
+  .footer {
     max-width: 1600px;
     height: 225px;
     &__container {

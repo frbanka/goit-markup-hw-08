@@ -21,7 +21,9 @@
     @include font($fs: 14px, $lh: 24px, $ls: 0.03em, $tal: left);
     color: var(--second-text-color);
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .features {
     flex-direction: row;
     flex-wrap: wrap;
     &__table {
@@ -34,7 +36,9 @@
       text-align: left;
     }
   }
-  @media screen and (min-width: 1200px) {
+}
+@media screen and (min-width: 1200px) {
+  .features {
     flex-direction: row;
     max-width: 1170px;
     &__text {
